@@ -1,0 +1,13 @@
+{
+  "name": "ssmv-app",
+  "version": "1.0.0",
+  "description": "SSMV community mandir app — Node.js backend (SQLite) + static frontend",
+  "private": true,
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}
