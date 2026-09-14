@@ -1,0 +1,2024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSMV — Shree Swaminarayan Mandir Vastral</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ---- Static utility layer (replaces the Tailwind Play CDN) ----
+     Hand-compiled to cover exactly the utility classes this page uses,
+     so no build step or runtime CDN script is required in production. */
+  :root { --ring-color: #C9A227; }
+  html { scroll-behavior: smooth; }
+  body { background: #FBF6EC; }
+  .hidden-important { display: none !important; }
+
+  /* Ornamental divider: thin gold rule with a small diamond node */
+  .motif-divider { display:flex; align-items:center; gap:0.75rem; }
+  .motif-divider::before, .motif-divider::after {
+    content: ''; flex: 1 1 auto; height: 1px; background: linear-gradient(90deg, transparent, rgba(201,162,39,0.55), transparent);
+  }
+  .motif-node { width: 7px; height: 7px; background: #C9A227; transform: rotate(45deg); flex: 0 0 auto; opacity: 0.85; }
+
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #E3D3B0; border-radius: 999px; }
+
+  *:focus-visible { outline: 2px solid #C9A227; outline-offset: 2px; }
+
+  @keyframes riseIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .rise-in { animation: riseIn 0.7s cubic-bezier(0.16,1,0.3,1) both; }
+
+  @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.82; }
+  }
+  .flame-flicker { animation: flicker 2.4s ease-in-out infinite; transform-origin: bottom center; }
+
+  .card-surface { background: #fff; border: 1px solid rgba(43,38,32,0.08); }
+
+  textarea, input, select { font-family: inherit; }
+
+  .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rise-in, .flame-flicker { animation: none !important; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* ---- Compiled utility classes ---- */
+.bg-cream { background-color: #FBF6EC; }
+.bg-ink { background-color: #2B2620; }
+.bg-maroon { background-color: #7A1F2B; }
+.bg-maroon-50 { background-color: #F7E9EA; }
+.bg-maroon-700 { background-color: #5C1620; }
+.bg-saffron { background-color: #E8823A; }
+.bg-saffron-50 { background-color: #FDF1E7; }
+.bg-white { background-color: #FFFFFF; }
+.text-cream { color: #FBF6EC; }
+.text-ink { color: #2B2620; }
+.text-maroon { color: #7A1F2B; }
+.text-saffron-700 { color: #B85A1E; }
+.text-slate { color: #6B6153; }
+.text-white { color: #FFFFFF; }
+.border-saffron { border-color: #E8823A; }
+.bg-cream\/60 { background-color: rgba(251,246,236,0.6); }
+.bg-cream\/90 { background-color: rgba(251,246,236,0.9); }
+.bg-ink\/5 { background-color: rgba(43,38,32,0.05); }
+.bg-ink\/10 { background-color: rgba(43,38,32,0.1); }
+.bg-ink\/50 { background-color: rgba(43,38,32,0.5); }
+.bg-ink\/70 { background-color: rgba(43,38,32,0.7); }
+.bg-sand\/40 { background-color: rgba(241,230,210,0.4); }
+.text-cream\/70 { color: rgba(251,246,236,0.7); }
+.text-gold-50\/80 { color: rgba(251,243,216,0.8); }
+.text-ink\/70 { color: rgba(43,38,32,0.7); }
+.text-ink\/75 { color: rgba(43,38,32,0.75); }
+.text-ink\/80 { color: rgba(43,38,32,0.8); }
+.border-ink\/10 { border-color: rgba(43,38,32,0.1); }
+.border-ink\/15 { border-color: rgba(43,38,32,0.15); }
+.border-maroon\/30 { border-color: rgba(122,31,43,0.3); }
+.hover\:bg-ink\/\[0\.03\]:hover { background-color: rgba(43,38,32,0.03); }
+.hover\:bg-ink\/5:hover { background-color: rgba(43,38,32,0.05); }
+.hover\:bg-maroon-50:hover { background-color: #F7E9EA; }
+.hover\:bg-maroon-700:hover { background-color: #5C1620; }
+.hover\:bg-saffron-700:hover { background-color: #B85A1E; }
+.hover\:text-ink:hover { color: #2B2620; }
+.focus\:bg-white:focus { background-color: #FFFFFF; }
+.hover\:underline:hover { text-decoration: underline; }
+.hover\:border-ink\/30:hover { border-color: rgba(43,38,32,0.3); }
+.hover\:shadow-md:hover { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); }
+.bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--grad-from, transparent), var(--grad-to, transparent)); }
+.from-maroon { --grad-from: #7A1F2B; }
+.to-maroon-700 { --grad-to: #5C1620; }
+.from-saffron-100 { --grad-from: #FBE3CE; }
+.to-saffron-100 { --grad-to: #FBE3CE; }
+.from-sand { --grad-from: #F1E6D2; }
+.to-sand { --grad-to: #F1E6D2; }
+.gap-1 { gap: 0.25rem; }
+.gap-1\.5 { gap: 0.375rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+.gap-5 { gap: 1.25rem; }
+.gap-10 { gap: 2.5rem; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-1\.5 { margin-bottom: 0.375rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-5 { margin-bottom: 1.25rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mt-0\.5 { margin-top: 0.125rem; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-5 { margin-top: 1.25rem; }
+.mt-6 { margin-top: 1.5rem; }
+.ml-1 { margin-left: 0.25rem; }
+.my-8 { margin-top: 2rem; margin-bottom: 2rem; }
+.my-14 { margin-top: 3.5rem; margin-bottom: 3.5rem; }
+.mt-auto { margin-top: auto; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.-mb-px { margin-bottom: -1px; }
+.p-2 { padding: 0.5rem; }
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.p-7 { padding: 1.75rem; }
+.p-8 { padding: 2rem; }
+.px-1\.5 { padding-left: 0.375rem; padding-right: 0.375rem; }
+.px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-2\.5 { padding-left: 0.625rem; padding-right: 0.625rem; }
+.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.px-5 { padding-left: 1.25rem; padding-right: 1.25rem; }
+.py-0\.5 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-1\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-2\.5 { padding-top: 0.625rem; padding-bottom: 0.625rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+.py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+.py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+.pt-10 { padding-top: 2.5rem; }
+.pt-14 { padding-top: 3.5rem; }
+.pb-16 { padding-bottom: 4rem; }
+.pl-3 { padding-left: 0.75rem; }
+.pr-1 { padding-right: 0.25rem; }
+.h-6 { height: 1.5rem; }
+.h-7 { height: 1.75rem; }
+.h-9 { height: 2.25rem; }
+.h-16 { height: 4rem; }
+.h-36 { height: 9rem; }
+.h-40 { height: 10rem; }
+.h-48 { height: 12rem; }
+.w-6 { width: 1.5rem; }
+.w-7 { width: 1.75rem; }
+.w-9 { width: 2.25rem; }
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.min-h-screen { min-height: 100vh; }
+.min-w-0 { min-width: 0px; }
+.max-w-2xl { max-width: 42rem; }
+.max-w-6xl { max-width: 72rem; }
+.max-w-lg { max-width: 32rem; }
+.max-w-sm { max-width: 24rem; }
+.max-w-xs { max-width: 20rem; }
+.max-w-\[110px\] { max-width: 110px; }
+.max-h-\[70vh\] { max-height: 70vh; }
+.top-0 { top: 0px; }
+.left-5 { left: 1.25rem; }
+.right-5 { right: 1.25rem; }
+.bottom-5 { bottom: 1.25rem; }
+.inset-0 { top:0;right:0;bottom:0;left:0; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+.relative { position: relative; }
+.z-40 { z-index: 40; }
+.z-\[90\] { z-index: 90; }
+.z-\[95\] { z-index: 95; }
+.z-\[100\] { z-index: 100; }
+.z-\[110\] { z-index: 110; }.flex { display: flex; }
+.inline-block { display: inline-block; }
+.grid { display: grid; }
+.hidden { display: none; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-1 { flex: 1 1 0%; }
+.shrink-0 { flex-shrink: 0; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.col-span-full { grid-column: 1 / -1; }
+.font-display { font-family: "Fraunces", serif; }
+.font-sans { font-family: "Inter", sans-serif; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.uppercase { text-transform: uppercase; }
+.tracking-wide { letter-spacing: 0.025em; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.whitespace-nowrap { white-space: nowrap; }
+.whitespace-pre-line { white-space: pre-line; }
+.leading-relaxed { line-height: 1.625; }
+.leading-snug { line-height: 1.375; }
+.leading-\[1\.08\] { line-height: 1.08; }
+.text-xs { font-size: 0.75rem; line-height: 1rem; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-base { font-size: 1rem; line-height: 1.5rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+.text-5xl { font-size: 3rem; line-height: 1; }
+.border { border-width: 1px; border-style: solid; border-color: currentColor; }
+.border-2 { border-width: 2px; border-style: solid; }
+.border-b { border-bottom-width: 1px; border-style: solid; }
+.border-b-2 { border-bottom-width: 2px; border-style: solid; }
+.border-t { border-top-width: 1px; border-style: solid; }
+.border-t-transparent { border-top-color: transparent; }
+.border-transparent { border-color: transparent; }
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-xl { border-radius: 0.75rem; }
+.rounded-2xl { border-radius: 1rem; }
+.rounded-full { border-radius: 9999px; }
+.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); }
+.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1); }
+.backdrop-blur { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.backdrop-blur-sm { backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+.transition-colors { transition-property: color, background-color, border-color; transition-duration: 150ms; transition-timing-function: cubic-bezier(0.4,0,0.2,1); }
+.transition-transform { transition-property: transform; transition-duration: 150ms; transition-timing-function: cubic-bezier(0.4,0,0.2,1); }
+.duration-300 { transition-duration: 300ms; }
+.animate-spin { animation: ssmv-spin 1s linear infinite; }
+@keyframes ssmv-spin { to { transform: rotate(360deg); } }
+.cursor-pointer { cursor: pointer; }
+.overflow-hidden { overflow: hidden; }
+.overflow-y-auto { overflow-y: auto; }
+.object-cover { object-fit: cover; }
+.object-contain { object-fit: contain; }
+.aspect-square { aspect-ratio: 1 / 1; }
+.resize-none { resize: none; }
+.group {  }
+.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }.group:hover .group-hover\:scale-105 { transform: scale(1.05); }
+@media (min-width: 640px) {
+  .sm\:block { display: block; }
+  .sm\:col-span-2 { grid-column: span 2 / span 2; }
+  .sm\:col-span-3 { grid-column: span 3 / span 3; }
+  .sm\:flex { display: flex; }
+  .sm\:flex-row { flex-direction: row; }
+  .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sm\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .sm\:items-end { align-items: flex-end; }
+  .sm\:left-auto { left: auto; }
+  .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .sm\:text-5xl { font-size: 3rem; line-height: 1; }
+}
+@media (min-width: 768px) {
+  .md\:col-span-2 { grid-column: span 2 / span 2; }
+  .md\:col-span-3 { grid-column: span 3 / span 3; }
+  .md\:flex { display: flex; }
+  .md\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .md\:hidden { display: none; }
+}
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+</style>
+</head>
+<body class="font-sans text-ink antialiased">
+
+<div id="bootLoading" class="hidden-important fixed inset-0 z-[105] flex items-center justify-center bg-cream">
+  <div class="flex flex-col items-center">
+    <div class="w-7 h-7 border-2 border-saffron border-t-transparent rounded-full animate-spin mb-3"></div>
+    <p class="text-sm text-slate">Loading SSMV…</p>
+  </div>
+</div>
+
+
+<!-- ============================= AUTH OVERLAY ============================= -->
+<div id="authOverlay" class="fixed inset-0 z-[100] flex items-center justify-center bg-ink/50 backdrop-blur-sm p-4">
+  <div class="w-full max-w-sm card-surface rounded-2xl shadow-xl p-8 rise-in">
+
+    <div class="flex flex-col items-center text-center mb-6">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" class="flame-flicker mb-3">
+        <path d="M20 4C20 4 13 13 13 20.5C13 26 16 30 20 30C24 30 27 26 27 20.5C27 17.5 25.3 14.8 24 13C24.5 16 22.7 18 20.8 17C19.3 16.2 20 13.5 20 11C17.5 13.5 16 17 16 20.5C16 23.5 17.8 25.5 20 25.5C22.2 25.5 24 23.5 24 20.5" stroke="#C9A227" stroke-width="1.6" fill="#E8823A" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h1 class="font-display text-2xl font-semibold text-maroon">SSMV</h1>
+      <p class="text-sm text-slate mt-1">Shree Swaminarayan Mandir Vastral</p>
+    </div>
+
+    <!-- Step 1: Google sign-in button -->
+    <div id="authStepGoogle">
+      <p class="text-sm text-slate text-center mb-6 leading-relaxed">Sign in to view events, browse the gallery and take part in the community.</p>
+      <button id="btnGoogleSignIn" class="w-full flex items-center justify-center gap-3 border border-ink/15 rounded-xl py-3 px-4 bg-white hover:bg-ink/[0.03] transition-colors font-medium text-sm shadow-sm">
+        <svg width="18" height="18" viewBox="0 0 48 48">
+          <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 8 3l6-6C34.5 5.1 29.6 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21 21-9.4 21-21c0-1.4-.1-2.8-.4-4z"/>
+          <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.9 18.9 13 24 13c3.1 0 5.8 1.1 8 3l6-6C34.5 5.1 29.6 3 24 3c-7.5 0-14 4.2-17.7 10.3z"/>
+          <path fill="#4CAF50" d="M24 45c5.5 0 10.4-2.1 14.1-5.6l-6.5-5.5C29.6 35.8 26.9 37 24 37c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.9 40.7 16.4 45 24 45z"/>
+          <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.2 4.2-4.1 5.6l6.5 5.5C41.9 35.8 45 30.4 45 24c0-1.4-.1-2.8-.4-3.5z"/>
+        </svg>
+        Continue with Google
+      </button>
+      <p class="text-xs text-slate text-center mt-5">This is a demo sign-in. No real Google account is contacted.</p>
+    </div>
+
+    <!-- Step 2: enter display name (simulated account) -->
+    <div id="authStepName" class="hidden-important">
+      <p class="text-sm text-slate text-center mb-4">Choose how your name appears to the community.</p>
+      <input id="authNameInput" type="text" placeholder="Your full name" maxlength="40"
+        class="w-full border border-ink/15 rounded-xl px-4 py-3 text-sm mb-3 bg-cream/60 focus:bg-white transition-colors" />
+      <button id="btnCompleteSignIn" class="w-full bg-maroon hover:bg-maroon-700 text-white rounded-xl py-3 font-medium text-sm transition-colors">
+        Continue
+      </button>
+    </div>
+
+    <!-- Step 3: loading -->
+    <div id="authStepLoading" class="hidden-important flex flex-col items-center py-6">
+      <div class="w-6 h-6 border-2 border-saffron border-t-transparent rounded-full animate-spin mb-3"></div>
+      <p class="text-sm text-slate">Signing you in…</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================= APP SHELL ============================= -->
+<div id="app" class="hidden-important min-h-screen flex flex-col">
+
+  <!-- TOP BAR (logo + account only — navigation lives in the bottom bar) -->
+  <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur border-b border-ink/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <button data-page="home" class="nav-link flex items-center gap-2 shrink-0">
+          <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
+            <path d="M20 4C20 4 13 13 13 20.5C13 26 16 30 20 30C24 30 27 26 27 20.5C27 17.5 25.3 14.8 24 13C24.5 16 22.7 18 20.8 17C19.3 16.2 20 13.5 20 11C17.5 13.5 16 17 16 20.5C16 23.5 17.8 25.5 20 25.5C22.2 25.5 24 23.5 24 20.5" stroke="#C9A227" stroke-width="1.8" fill="#E8823A" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-display font-semibold text-lg text-maroon">SSMV</span>
+        </button>
+
+        <div id="userBadge" class="hidden sm:flex items-center gap-2 pl-3 pr-1 py-1 rounded-full bg-ink/5">
+          <span id="userAvatar" class="w-7 h-7 rounded-full bg-saffron text-white text-xs font-semibold flex items-center justify-center"></span>
+          <span id="userNameLabel" class="text-xs font-medium max-w-[110px] truncate"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BOTTOM NAVIGATION -->
+  <nav id="bottomNav" class="fixed bottom-0 inset-x-0 z-40 bg-cream/95 backdrop-blur border-t border-ink/10 flex">
+    <button data-page="home" class="nav-link bottom-nav-btn">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>
+      <span>Home</span>
+    </button>
+    <button data-page="events" class="nav-link bottom-nav-btn">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+      <span>Events</span>
+    </button>
+    <button data-page="gallery" class="nav-link bottom-nav-btn">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10.5" r="1.5"/><path d="M21 16l-5-5-4 4-3-3-6 6"/></svg>
+      <span>Gallery</span>
+    </button>
+    <button data-page="calendar" class="nav-link bottom-nav-btn">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><circle cx="8.3" cy="14" r="1"/><circle cx="12" cy="14" r="1"/><circle cx="15.7" cy="14" r="1"/></svg>
+      <span>Calendar</span>
+    </button>
+    <button id="navMembersHub" class="bottom-nav-btn">
+      <svg id="hubLockIcon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
+      <span>Members</span>
+    </button>
+  </nav>
+
+  <main class="flex-1">
+
+    <!-- ============================= HOME PAGE ============================= -->
+    <section data-view="home" class="page-view">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-14 pb-16">
+        <div class="grid md:grid-cols-5 gap-10 items-center">
+          <div class="md:col-span-3 rise-in">
+            <p class="text-saffron-700 font-medium text-sm tracking-wide mb-3">Welcome to SSMV Vastral</p>
+            <h1 class="font-display text-4xl sm:text-5xl leading-[1.08] font-semibold text-ink mb-5">
+              A home for darshan,<br class="hidden sm:block"> seva and satsang.
+            </h1>
+            <p class="text-slate text-base leading-relaxed max-w-lg mb-8">
+              SSMV keeps our community's events, celebrations and photographs in one place —
+              open for everyone to see, and shaped together by the members who serve it.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <button data-page="events" class="nav-link bg-maroon hover:bg-maroon-700 text-white px-5 py-3 rounded-xl text-sm font-medium transition-colors">See upcoming events</button>
+              <button data-page="gallery" class="nav-link bg-white hover:bg-ink/5 border border-ink/15 text-ink px-5 py-3 rounded-xl text-sm font-medium transition-colors">Browse the gallery</button>
+            </div>
+          </div>
+          <div class="md:col-span-2 rise-in" style="animation-delay:0.1s">
+            <div class="rounded-2xl bg-gradient-to-br from-maroon to-maroon-700 p-7 text-cream shadow-lg">
+              <p class="text-xs uppercase tracking-wide text-gold-50/80 mb-5" style="letter-spacing:0.08em;">At a glance</p>
+              <div class="grid grid-cols-2 gap-5">
+                <div>
+                  <p id="statUpcoming" class="font-display text-3xl font-semibold">0</p>
+                  <p class="text-xs text-cream/70 mt-1">Upcoming events</p>
+                </div>
+                <div>
+                  <p id="statAlbums" class="font-display text-3xl font-semibold">0</p>
+                  <p class="text-xs text-cream/70 mt-1">Photo albums</p>
+                </div>
+                <div>
+                  <p id="statPhotos" class="font-display text-3xl font-semibold">0</p>
+                  <p class="text-xs text-cream/70 mt-1">Photos shared</p>
+                </div>
+                <div>
+                  <p id="statMembers" class="font-display text-3xl font-semibold">0</p>
+                  <p class="text-xs text-cream/70 mt-1">Verified members</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 card-surface rounded-2xl p-5 flex flex-wrap items-center justify-between gap-4 rise-in" style="animation-delay:0.15s">
+          <div>
+            <p class="text-xs uppercase tracking-wide text-slate mb-1" style="letter-spacing:0.08em;">Aaje / Today's tithi</p>
+            <p id="homeTithiLabel" class="font-display text-lg font-semibold"></p>
+            <p id="homeSunTimes" class="text-xs text-slate mt-1"></p>
+          </div>
+          <button id="btnHomeViewCalendar" class="bg-maroon hover:bg-maroon-700 text-white px-4 py-2.5 rounded-xl text-sm font-medium whitespace-nowrap">View full day →</button>
+        </div>
+
+        <div class="motif-divider my-14"><span class="motif-node"></span></div>
+
+        <div class="flex items-end justify-between mb-6">
+          <h2 class="font-display text-2xl font-semibold">Coming up soon</h2>
+          <button data-page="events" class="nav-link text-sm font-medium text-saffron-700 hover:underline">View all →</button>
+        </div>
+        <div id="homeUpcomingList" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+
+        <div class="motif-divider my-14"><span class="motif-node"></span></div>
+
+        <div class="flex items-end justify-between mb-6">
+          <h2 class="font-display text-2xl font-semibold">Our verified members</h2>
+          <span id="memberCountLabel" class="text-sm text-slate"></span>
+        </div>
+        <div id="homeMembersList" class="flex flex-wrap gap-5"></div>
+        <p id="homeMembersEmpty" class="hidden text-sm text-slate">No verified members yet — be the first to join through the Members Hub.</p>
+      </div>
+    </section>
+
+    <!-- ============================= EVENTS PAGE ============================= -->
+    <section data-view="events" class="page-view hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-16">
+        <div class="flex flex-wrap items-start justify-between gap-4 mb-2">
+          <div>
+            <h1 class="font-display text-3xl font-semibold">Events</h1>
+            <p class="text-slate text-sm mt-1">Everything the community has planned, approved by verified members.</p>
+          </div>
+          <button id="btnAddEvent" class="bg-saffron hover:bg-saffron-700 text-white px-4 py-2.5 rounded-xl text-sm font-medium transition-colors whitespace-nowrap">+ Submit an event</button>
+        </div>
+
+        <div id="eventCategoryChips" class="flex flex-wrap gap-2 mt-6 mb-8"></div>
+
+        <div id="eventsList" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+        <div id="eventsEmpty" class="hidden text-center py-20">
+          <p class="text-slate text-sm">No events here yet. Be the first to submit one.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= GALLERY PAGE ============================= -->
+    <section data-view="gallery" class="page-view hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-16">
+
+        <!-- Albums grid view -->
+        <div id="galleryAlbumsView">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-8">
+            <div>
+              <h1 class="font-display text-3xl font-semibold">Gallery</h1>
+              <p class="text-slate text-sm mt-1">Moments from darshan, utsav and satsang, kept by the community.</p>
+            </div>
+            <button id="btnAddAlbum" class="bg-saffron hover:bg-saffron-700 text-white px-4 py-2.5 rounded-xl text-sm font-medium transition-colors whitespace-nowrap">+ New album</button>
+          </div>
+          <div id="albumsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+        </div>
+
+        <!-- Single album view -->
+        <div id="galleryAlbumView" class="hidden">
+          <button id="btnBackToAlbums" class="flex items-center gap-1.5 text-sm font-medium text-slate hover:text-ink mb-6">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            All albums
+          </button>
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-8">
+            <div>
+              <h1 id="albumViewTitle" class="font-display text-3xl font-semibold"></h1>
+              <p id="albumViewMeta" class="text-slate text-sm mt-1"></p>
+            </div>
+            <div class="flex gap-2">
+              <button id="btnUploadPhotos" class="bg-saffron hover:bg-saffron-700 text-white px-4 py-2.5 rounded-xl text-sm font-medium transition-colors whitespace-nowrap">+ Upload photos</button>
+              <button id="btnDeleteAlbum" class="border border-maroon/30 text-maroon hover:bg-maroon-50 px-4 py-2.5 rounded-xl text-sm font-medium transition-colors whitespace-nowrap">Delete album</button>
+            </div>
+          </div>
+          <div id="albumPhotosGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+          <p id="albumEmptyMsg" class="hidden text-center text-slate text-sm py-16">No photos in this album yet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= CALENDAR PAGE ============================= -->
+    <section data-view="calendar" class="page-view hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-16">
+        <h1 class="font-display text-3xl font-semibold">Panchang Calendar</h1>
+        <p class="text-slate text-sm mt-1 mb-6">Gujarati tithi, ekadashi, festivals and events — tap any date for the full day.</p>
+
+        <div class="flex items-center justify-between gap-3 mb-5">
+          <button id="calPrevMonth" class="w-10 h-10 flex items-center justify-center rounded-xl border border-ink/15 hover:bg-ink/5">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="text-center">
+            <p id="calMonthLabel" class="font-display text-xl font-semibold"></p>
+            <button id="calTodayBtn" class="text-xs font-medium text-saffron-700 hover:underline mt-0.5">Today</button>
+          </div>
+          <button id="calNextMonth" class="w-10 h-10 flex items-center justify-center rounded-xl border border-ink/15 hover:bg-ink/5">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+
+        <div class="grid grid-cols-7 gap-1 sm:gap-2 mb-2">
+          <div class="text-center text-xs font-medium text-slate py-1">Sun</div>
+          <div class="text-center text-xs font-medium text-slate py-1">Mon</div>
+          <div class="text-center text-xs font-medium text-slate py-1">Tue</div>
+          <div class="text-center text-xs font-medium text-slate py-1">Wed</div>
+          <div class="text-center text-xs font-medium text-slate py-1">Thu</div>
+          <div class="text-center text-xs font-medium text-slate py-1">Fri</div>
+          <div class="text-center text-xs font-medium text-slate py-1">Sat</div>
+        </div>
+        <div id="calGrid" class="grid grid-cols-7 gap-1 sm:gap-2"></div>
+
+        <div class="flex flex-wrap gap-4 mt-6 text-xs text-slate">
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-maroon inline-block"></span> Ekadashi</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-ink inline-block"></span> Amas / Punam</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-gold inline-block"></span> Festival</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-saffron inline-block"></span> Community event</span>
+        </div>
+        <p class="text-xs text-slate/80 mt-4 leading-relaxed max-w-xl">
+          Tithi shown here is approximate, calculated from average lunar-month length and anchored to published
+          2026 panchang dates. It's meant to help with planning — please confirm exact ekadashi and vrat timings
+          with your local panchang before observing a fast.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================= MEMBERS HUB PAGE ============================= -->
+    <section data-view="hub" class="page-view hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-16">
+        <h1 class="font-display text-3xl font-semibold">Members Hub</h1>
+        <p id="hubIntroText" class="text-slate text-sm mt-1 mb-8">Review requests and manage everything shown to the community.</p>
+
+        <div id="hubGuestCta" class="hidden card-surface rounded-2xl p-5 mb-8 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <p class="font-display text-lg font-semibold mb-1">Want to help run SSMV?</p>
+            <p class="text-sm text-slate">Enter the member passcode to submit events, manage the gallery and join this list.</p>
+          </div>
+          <button id="btnHubEnterPasscode" class="bg-maroon hover:bg-maroon-700 text-white px-4 py-2.5 rounded-xl text-sm font-medium whitespace-nowrap">Enter passcode</button>
+        </div>
+
+        <div class="flex gap-1 border-b border-ink/10 mb-8 flex-wrap">
+          <button data-hubtab="directory" class="hub-tab px-4 py-3 text-sm font-medium border-b-2 border-transparent -mb-px">
+            Members <span id="memberCountBadge" class="ml-1 text-xs bg-ink/10 text-ink rounded-full px-1.5 py-0.5"></span>
+          </button>
+          <button data-hubtab="requests" class="hub-tab hub-tab-member px-4 py-3 text-sm font-medium border-b-2 border-transparent -mb-px hidden">
+            Pending requests <span id="pendingCountBadge" class="ml-1 text-xs bg-saffron text-white rounded-full px-1.5 py-0.5"></span>
+          </button>
+          <button data-hubtab="manage" class="hub-tab hub-tab-member px-4 py-3 text-sm font-medium border-b-2 border-transparent -mb-px hidden">Manage events</button>
+          <button data-hubtab="about" class="hub-tab hub-tab-member px-4 py-3 text-sm font-medium border-b-2 border-transparent -mb-px hidden">Membership</button>
+        </div>
+
+        <div data-hubpanel="directory" class="hub-panel">
+          <div id="membersDirectoryList" class="flex flex-col gap-3"></div>
+          <p id="membersDirectoryEmpty" class="hidden text-center text-slate text-sm py-16">No verified members yet on this device.</p>
+        </div>
+
+        <div data-hubpanel="requests" class="hub-panel hidden">
+          <div id="pendingList" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+          <p id="pendingEmptyMsg" class="hidden text-center text-slate text-sm py-16">No pending requests. All caught up.</p>
+        </div>
+
+        <div data-hubpanel="manage" class="hub-panel hidden">
+          <div id="manageList" class="flex flex-col gap-3"></div>
+        </div>
+
+        <div data-hubpanel="about" class="hub-panel hidden max-w-lg">
+          <div class="card-surface rounded-2xl p-6">
+            <div class="flex items-center gap-4 mb-5">
+              <span id="profileAvatarWrap" class="w-16 h-16 rounded-full bg-saffron text-white text-xl font-semibold flex items-center justify-center overflow-hidden shrink-0"></span>
+              <div class="min-w-0">
+                <p id="profileNameLabel" class="font-display text-lg font-semibold truncate"></p>
+                <p class="text-xs text-saffron-700 font-medium">Verified Member</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2.5 mb-5 text-sm">
+              <div class="flex items-center gap-2.5 text-ink/80">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="shrink-0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+                <span id="profileMobile">Mobile not added yet</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-ink/80">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="shrink-0"><path d="M21 11.5a8.5 8.5 0 01-12.36 7.56L4 20l1.02-4.5A8.5 8.5 0 1121 11.5z"/></svg>
+                <span id="profileWhatsapp">WhatsApp not added yet</span>
+              </div>
+            </div>
+
+            <button id="btnEditMemberProfile" class="w-full border border-ink/15 hover:bg-ink/5 rounded-xl py-2.5 text-sm font-medium mb-3">Edit profile photo & numbers</button>
+
+            <p class="text-sm text-slate leading-relaxed mb-4 pt-3 border-t border-ink/10">
+              You're signed in as a <span class="font-semibold text-ink">Verified Member</span>. You can submit,
+              approve, edit and remove events, and manage photo albums — the same access every verified member shares.
+            </p>
+            <button id="btnLeaveMembership" class="text-sm font-medium text-maroon hover:underline">Step back to guest view</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-ink/10 bg-sand/40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <svg width="18" height="18" viewBox="0 0 40 40"><path d="M20 4C20 4 13 13 13 20.5C13 26 16 30 20 30C24 30 27 26 27 20.5C27 17.5 25.3 14.8 24 13C24.5 16 22.7 18 20.8 17C19.3 16.2 20 13.5 20 11C17.5 13.5 16 17 16 20.5C16 23.5 17.8 25.5 20 25.5C22.2 25.5 24 23.5 24 20.5" stroke="#C9A227" stroke-width="1.8" fill="#E8823A" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="font-display font-semibold text-maroon">SSMV</span>
+      </div>
+      <p class="text-xs text-slate">Shree Swaminarayan Mandir Vastral — a community kept by its members.</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ============================= MODALS ============================= -->
+
+<!-- Passcode modal -->
+<div id="modalPasscode" class="modal-overlay fixed inset-0 z-[90] hidden items-center justify-center bg-ink/50 backdrop-blur-sm p-4">
+  <div class="w-full max-w-sm card-surface rounded-2xl shadow-xl p-7 rise-in">
+    <h3 class="font-display text-xl font-semibold mb-1">Members Hub access</h3>
+    <p class="text-sm text-slate mb-5">Enter the member passcode to unlock verified access.</p>
+    <input id="passcodeInput" type="password" placeholder="Passcode" class="w-full border border-ink/15 rounded-xl px-4 py-3 text-sm mb-2 bg-cream/60 focus:bg-white transition-colors" />
+    <p id="passcodeError" class="hidden text-xs text-maroon mb-2">That passcode isn't right. Try again.</p>
+    <div class="flex gap-2 mt-4">
+      <button data-close-modal="modalPasscode" class="flex-1 border border-ink/15 rounded-xl py-2.5 text-sm font-medium hover:bg-ink/5">Cancel</button>
+      <button id="btnSubmitPasscode" class="flex-1 bg-maroon hover:bg-maroon-700 text-white rounded-xl py-2.5 text-sm font-medium">Unlock</button>
+    </div>
+  </div>
+</div>
+
+<!-- Member profile modal (photo, mobile, WhatsApp) -->
+<div id="modalMemberProfile" class="modal-overlay fixed inset-0 z-[92] hidden items-center justify-center bg-ink/50 backdrop-blur-sm p-4 overflow-y-auto">
+  <div class="w-full max-w-sm card-surface rounded-2xl shadow-xl p-7 my-8 rise-in">
+    <h3 class="font-display text-xl font-semibold mb-1">Complete your member profile</h3>
+    <p class="text-sm text-slate mb-5">Add a photo and a contact number so other members recognize and can reach you.</p>
+
+    <div class="flex flex-col items-center mb-4">
+      <span id="mpAvatarPreview" class="w-20 h-20 rounded-full bg-saffron text-white text-2xl font-semibold flex items-center justify-center overflow-hidden mb-3"></span>
+      <label class="text-sm font-medium text-saffron-700 hover:underline cursor-pointer">
+        Choose photo from gallery
+        <input id="mpPhotoInput" type="file" accept="image/*" class="hidden">
+      </label>
+    </div>
+
+    <div class="flex flex-col gap-3">
+      <div>
+        <label class="text-xs font-medium text-slate">Mobile number</label>
+        <input id="mpMobile" type="tel" placeholder="e.g. 98765 43210" class="form-input mt-1" maxlength="20">
+      </div>
+      <div>
+        <label class="text-xs font-medium text-slate">WhatsApp number</label>
+        <input id="mpWhatsapp" type="tel" placeholder="e.g. 98765 43210" class="form-input mt-1" maxlength="20">
+        <label class="flex items-center gap-2 text-xs text-slate mt-1.5">
+          <input id="mpSameAsMobile" type="checkbox" class="w-3.5 h-3.5">
+          Same as mobile number
+        </label>
+      </div>
+    </div>
+
+    <div class="flex gap-2 mt-6">
+      <button id="btnSkipMemberProfile" class="flex-1 border border-ink/15 rounded-xl py-2.5 text-sm font-medium hover:bg-ink/5">Skip for now</button>
+      <button id="btnSaveMemberProfile" class="flex-1 bg-maroon hover:bg-maroon-700 text-white rounded-xl py-2.5 text-sm font-medium">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- Event form modal -->
+<div id="modalEventForm" class="modal-overlay fixed inset-0 z-[90] hidden items-center justify-center bg-ink/50 backdrop-blur-sm p-4 overflow-y-auto">
+  <div class="w-full max-w-lg card-surface rounded-2xl shadow-xl p-7 my-8 rise-in">
+    <h3 id="eventFormTitle" class="font-display text-xl font-semibold mb-1">Submit an event</h3>
+    <p class="text-sm text-slate mb-5">It will appear publicly once a verified member approves it.</p>
+    <div class="flex flex-col gap-3">
+      <input id="efTitle" type="text" placeholder="Event title" class="form-input" maxlength="80">
+      <div class="grid grid-cols-2 gap-3">
+        <input id="efDate" type="date" class="form-input">
+        <input id="efTime" type="time" class="form-input">
+      </div>
+      <input id="efLocation" type="text" placeholder="Location" class="form-input" maxlength="80">
+      <select id="efCategory" class="form-input">
+        <option value="Darshan">Darshan</option>
+        <option value="Utsav">Utsav</option>
+        <option value="Satsang">Satsang</option>
+        <option value="Seva">Seva</option>
+        <option value="Community">Community</option>
+      </select>
+      <textarea id="efDescription" placeholder="Description" rows="3" class="form-input resize-none" maxlength="600"></textarea>
+      <label class="text-xs font-medium text-slate">Banner image</label>
+      <input id="efImage" type="file" accept="image/*" class="form-input p-2 text-xs">
+      <img id="efImagePreview" class="hidden w-full h-36 object-cover rounded-xl mt-1" />
+    </div>
+    <div class="flex gap-2 mt-6">
+      <button data-close-modal="modalEventForm" class="flex-1 border border-ink/15 rounded-xl py-2.5 text-sm font-medium hover:bg-ink/5">Cancel</button>
+      <button id="btnSaveEvent" class="flex-1 bg-maroon hover:bg-maroon-700 text-white rounded-xl py-2.5 text-sm font-medium">Submit</button>
+    </div>
+  </div>
+</div>
+
+<!-- Event detail modal -->
+<div id="modalEventDetail" class="modal-overlay fixed inset-0 z-[90] hidden items-center justify-center bg-ink/50 backdrop-blur-sm p-4 overflow-y-auto">
+  <div class="w-full max-w-lg card-surface rounded-2xl shadow-xl overflow-hidden my-8 rise-in">
+    <img id="edImage" class="w-full h-48 object-cover hidden" />
+    <div class="p-7">
+      <span id="edCategory" class="inline-block text-xs font-medium text-saffron-700 bg-saffron-50 rounded-full px-2.5 py-1 mb-3"></span>
+      <h3 id="edTitle" class="font-display text-2xl font-semibold mb-2"></h3>
+      <p id="edWhen" class="text-sm text-slate mb-1"></p>
+      <p id="edWhere" class="text-sm text-slate mb-4"></p>
+      <p id="edDescription" class="text-sm text-ink/80 leading-relaxed mb-5 whitespace-pre-line"></p>
+      <p id="edStatus" class="text-xs text-slate mb-4"></p>
+      <div id="edMemberActions" class="hidden flex-wrap gap-2">
+        <button id="edApprove" class="hidden bg-saffron hover:bg-saffron-700 text-white px-4 py-2 rounded-xl text-sm font-medium">Approve</button>
+        <button id="edReject" class="hidden border border-maroon/30 text-maroon hover:bg-maroon-50 px-4 py-2 rounded-xl text-sm font-medium">Reject</button>
+        <button id="edEdit" class="border border-ink/15 hover:bg-ink/5 px-4 py-2 rounded-xl text-sm font-medium">Edit</button>
+        <button id="edDelete" class="border border-maroon/30 text-maroon hover:bg-maroon-50 px-4 py-2 rounded-xl text-sm font-medium">Delete</button>
+      </div>
+      <button data-close-modal="modalEventDetail" class="mt-5 text-sm font-medium text-slate hover:text-ink">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Album form modal -->
+<div id="modalAlbumForm" class="modal-overlay fixed inset-0 z-[90] hidden items-center justify-center bg-ink/50 backdrop-blur-sm p-4">
+  <div class="w-full max-w-sm card-surface rounded-2xl shadow-xl p-7 rise-in">
+    <h3 class="font-display text-xl font-semibold mb-4">New album</h3>
+    <input id="afName" type="text" placeholder="Album name (e.g. Diwali Utsav 2026)" class="form-input" maxlength="60">
+    <div class="flex gap-2 mt-6">
+      <button data-close-modal="modalAlbumForm" class="flex-1 border border-ink/15 rounded-xl py-2.5 text-sm font-medium hover:bg-ink/5">Cancel</button>
+      <button id="btnSaveAlbum" class="flex-1 bg-maroon hover:bg-maroon-700 text-white rounded-xl py-2.5 text-sm font-medium">Create</button>
+    </div>
+  </div>
+</div>
+
+<!-- Photo detail modal -->
+<div id="modalPhotoDetail" class="modal-overlay fixed inset-0 z-[90] hidden items-center justify-center bg-ink/70 backdrop-blur-sm p-4 overflow-y-auto">
+  <div class="w-full max-w-2xl bg-white rounded-2xl shadow-xl overflow-hidden my-8 rise-in grid sm:grid-cols-5">
+    <div class="sm:col-span-3 bg-ink flex items-center justify-center">
+      <img id="pdImage" class="w-full max-h-[70vh] object-contain" />
+    </div>
+    <div class="sm:col-span-2 p-6 flex flex-col">
+      <p id="pdCaption" class="font-display text-lg font-semibold mb-2"></p>
+      <p id="pdDescription" class="text-sm text-ink/75 leading-relaxed mb-4 flex-1"></p>
+      <p class="text-xs text-slate mb-1">Uploaded by <span id="pdUploader" class="font-medium text-ink"></span></p>
+      <p class="text-xs text-slate mb-5" id="pdDate"></p>
+      <div id="pdMemberActions" class="hidden flex flex-wrap gap-2 mb-2">
+        <button id="pdEdit" class="border border-ink/15 hover:bg-ink/5 px-3 py-2 rounded-lg text-xs font-medium">Edit details</button>
+        <button id="pdDelete" class="border border-maroon/30 text-maroon hover:bg-maroon-50 px-3 py-2 rounded-lg text-xs font-medium">Delete photo</button>
+      </div>
+      <button data-close-modal="modalPhotoDetail" class="text-sm font-medium text-slate hover:text-ink text-left">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Photo edit modal -->
+<div id="modalPhotoEdit" class="modal-overlay fixed inset-0 z-[95] hidden items-center justify-center bg-ink/50 backdrop-blur-sm p-4">
+  <div class="w-full max-w-sm card-surface rounded-2xl shadow-xl p-7 rise-in">
+    <h3 class="font-display text-xl font-semibold mb-4">Photo details</h3>
+    <input id="peCaption" type="text" placeholder="Caption" class="form-input mb-3" maxlength="80">
+    <textarea id="peDescription" placeholder="Description" rows="3" class="form-input resize-none"></textarea>
+    <div class="flex gap-2 mt-5">
+      <button data-close-modal="modalPhotoEdit" class="flex-1 border border-ink/15 rounded-xl py-2.5 text-sm font-medium hover:bg-ink/5">Cancel</button>
+      <button id="btnSavePhotoEdit" class="flex-1 bg-maroon hover:bg-maroon-700 text-white rounded-xl py-2.5 text-sm font-medium">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- Generic confirm modal -->
+<div id="modalConfirm" class="modal-overlay fixed inset-0 z-[95] hidden items-center justify-center bg-ink/50 backdrop-blur-sm p-4">
+  <div class="w-full max-w-sm card-surface rounded-2xl shadow-xl p-7 rise-in">
+    <h3 id="confirmTitle" class="font-display text-xl font-semibold mb-2">Are you sure?</h3>
+    <p id="confirmBody" class="text-sm text-slate mb-6">This action can't be undone.</p>
+    <div class="flex gap-2">
+      <button data-close-modal="modalConfirm" class="flex-1 border border-ink/15 rounded-xl py-2.5 text-sm font-medium hover:bg-ink/5">Cancel</button>
+      <button id="btnConfirmAction" class="flex-1 bg-maroon hover:bg-maroon-700 text-white rounded-xl py-2.5 text-sm font-medium">Delete</button>
+    </div>
+  </div>
+</div>
+
+<!-- Fullscreen day detail (Calendar) -->
+<div id="dayFullscreen" class="fixed inset-0 z-[150] hidden bg-cream overflow-y-auto">
+  <div class="max-w-2xl mx-auto px-5 sm:px-6 pt-6 pb-16">
+    <div class="flex items-center justify-between mb-6">
+      <button id="btnCloseDayView" class="w-10 h-10 flex items-center justify-center rounded-full border border-ink/15 hover:bg-ink/5">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="flex items-center gap-2">
+        <button id="dayPrevBtn" class="w-9 h-9 flex items-center justify-center rounded-full border border-ink/15 hover:bg-ink/5">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button id="dayNextBtn" class="w-9 h-9 flex items-center justify-center rounded-full border border-ink/15 hover:bg-ink/5">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <p id="dfWeekday" class="text-saffron-700 font-medium text-sm tracking-wide mb-1"></p>
+    <h1 id="dfDate" class="font-display text-3xl sm:text-4xl font-semibold mb-2"></h1>
+    <p id="dfVikram" class="text-slate text-sm mb-6"></p>
+
+    <div id="dfEkadashiBanner" class="hidden rounded-2xl bg-maroon text-cream p-5 mb-4">
+      <p class="text-xs uppercase tracking-wide text-cream/70 mb-1" style="letter-spacing:0.08em;">Ekadashi</p>
+      <p id="dfEkadashiText" class="font-display text-lg font-semibold"></p>
+    </div>
+
+    <div id="dfAmasPunamBanner" class="hidden rounded-2xl bg-ink text-cream p-5 mb-4">
+      <p class="text-xs uppercase tracking-wide text-cream/70 mb-1" style="letter-spacing:0.08em;" id="dfAmasPunamKind"></p>
+      <p id="dfAmasPunamText" class="font-display text-lg font-semibold"></p>
+    </div>
+
+    <div id="dfFestivals" class="flex flex-col gap-3 mb-4"></div>
+
+    <div class="grid grid-cols-2 gap-3 mb-6">
+      <div class="card-surface rounded-2xl p-5">
+        <div class="flex items-center gap-2 mb-2 text-saffron-700">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <span class="text-xs font-medium">Sunrise</span>
+        </div>
+        <p id="dfSunrise" class="font-display text-xl font-semibold"></p>
+      </div>
+      <div class="card-surface rounded-2xl p-5">
+        <div class="flex items-center gap-2 mb-2 text-maroon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v8M4.9 8.9l1.4 1.4M19.1 8.9l-1.4 1.4M2 18h20M6 18a6 6 0 0112 0"/></svg>
+          <span class="text-xs font-medium">Sunset</span>
+        </div>
+        <p id="dfSunset" class="font-display text-xl font-semibold"></p>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="font-display text-lg font-semibold">Events this day</h2>
+    </div>
+    <div id="dfEventsList" class="flex flex-col gap-3 mb-2"></div>
+    <p id="dfEventsEmpty" class="hidden text-sm text-slate py-6 text-center">No community events on this day.</p>
+
+    <p class="text-xs text-slate/80 mt-8 leading-relaxed">
+      Sunrise and sunset are calculated for Vastral, Ahmedabad and may be off by a minute or two.
+      Tithi is approximate — please confirm exact vrat/ekadashi timings with your local panchang.
+    </p>
+  </div>
+</div>
+
+<!-- Toast container -->
+<div id="toastContainer" class="fixed bottom-5 right-5 left-5 sm:left-auto z-[110] flex flex-col gap-2 items-center sm:items-end"></div>
+
+<style>
+  .form-input { border: 1px solid rgba(43,38,32,0.15); border-radius: 0.75rem; padding: 0.75rem 1rem; font-size: 0.875rem; width: 100%; background: rgba(251,246,236,0.6); }
+  .form-input:focus { background: #fff; }
+  .nav-link.active { color: #7A1F2B; background: rgba(122,31,43,0.06); }
+  .hub-tab.active { color: #7A1F2B; border-color: #C9A227; }
+
+  /* Bottom navigation */
+  main { padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px)); }
+  #bottomNav { padding-bottom: env(safe-area-inset-bottom, 0px); box-shadow: 0 -4px 16px rgba(43,38,32,0.06); }
+  .bottom-nav-btn {
+    flex: 1 1 0%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 0.2rem; padding: 0.55rem 0.25rem 0.6rem; font-size: 0.68rem; font-weight: 500; color: #6B6153;
+    background: transparent; border: none; cursor: pointer; transition: color 0.15s ease;
+  }
+  .bottom-nav-btn:hover { color: #2B2620; }
+  .bottom-nav-btn.active { color: #7A1F2B; }
+  .bottom-nav-btn.active svg { stroke: #7A1F2B; }
+  footer { margin-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px)); }
+
+  /* Calendar grid */
+  .calendar-cell {
+    aspect-ratio: 1 / 1; border-radius: 0.85rem; background: #fff; border: 1px solid rgba(43,38,32,0.08);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.2rem;
+    cursor: pointer; transition: box-shadow 0.15s ease, border-color 0.15s ease; padding: 0.25rem;
+  }
+  .calendar-cell:hover { box-shadow: 0 2px 8px rgba(43,38,32,0.1); border-color: rgba(43,38,32,0.18); }
+  .calendar-cell-today { border-color: #C9A227; border-width: 2px; background: #FDF1E7; }
+  .calendar-cell-ekadashi .cal-daynum { color: #7A1F2B; font-weight: 600; }
+  .cal-daynum { font-size: 0.85rem; font-weight: 500; }
+  .cal-dots { display: flex; gap: 2px; height: 6px; }
+  .cal-dot { width: 5px; height: 5px; border-radius: 999px; display: inline-block; }
+  .cal-dot-maroon { background: #7A1F2B; }
+  .cal-dot-gold { background: #C9A227; }
+  .cal-dot-saffron { background: #E8823A; }
+  .cal-dot-ink { background: #2B2620; }
+  .calendar-cell-amaspunam .cal-daynum { text-decoration: underline; text-decoration-color: rgba(43,38,32,0.4); text-underline-offset: 2px; }
+  @media (max-width: 480px) { .cal-daynum { font-size: 0.75rem; } }
+
+  /* ---- Utilities added for the calendar / bottom-nav feature ---- */
+  .bg-cream\/95 { background-color: rgba(251,246,236,0.95); }
+  .bg-gold { background-color: #C9A227; }
+  .bottom-0 { bottom: 0px; }
+  .inset-x-0 { left: 0px; right: 0px; }
+  .grid-cols-7 { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+  .h-10 { height: 2.5rem; }
+  .h-2 { height: 0.5rem; }
+  .w-10 { width: 2.5rem; }
+  .w-2 { width: 0.5rem; }
+  .max-w-xl { max-width: 36rem; }
+  .mt-8 { margin-top: 2rem; }
+  .p-5 { padding: 1.25rem; }
+  .pt-6 { padding-top: 1.5rem; }
+  .text-slate\/80 { color: rgba(107,97,83,0.8); }
+  .z-\[150\] { z-index: 150; }
+  @media (min-width: 640px) {
+    .sm\:gap-2 { gap: 0.5rem; }
+    .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+  }
+  .gap-2\.5 { gap: 0.625rem; }
+  .h-16 { height: 4rem; }
+  .h-11 { height: 2.75rem; }
+  .w-11 { width: 2.75rem; }
+  .h-20 { height: 5rem; }
+  .h-3\.5 { height: 0.875rem; }
+  .w-16 { width: 4rem; }
+  .w-20 { width: 5rem; }
+  .w-3\.5 { width: 0.875rem; }
+  .mt-1\.5 { margin-top: 0.375rem; }
+  .pt-3 { padding-top: 0.75rem; }
+  .z-\[92\] { z-index: 92; }
+  .z-\[105\] { z-index: 105; }
+  .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+  .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+</style>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ============================= CONSTANTS ============================= */
+  var SESSION_KEY = "ssmv_session_v1";
+  var API_BASE = "/api";
+  var CATEGORIES = ["Darshan","Utsav","Satsang","Seva","Community"];
+
+  function uid(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,8); }
+
+  /* ============================= API CLIENT ============================= */
+  function apiRequest(path, method, body){
+    var opts = { method: method || 'GET' };
+    if(body !== undefined){
+      opts.headers = { 'Content-Type': 'application/json' };
+      opts.body = JSON.stringify(body);
+    }
+    return fetch(API_BASE + path, opts).then(function(r){
+      if(!r.ok) return r.json().catch(function(){ return {}; }).then(function(e){
+        throw new Error(e.error || ('Request failed: ' + r.status));
+      });
+      return r.json();
+    });
+  }
+  var api = {
+    getEvents: function(){ return apiRequest('/events'); },
+    createEvent: function(ev){ return apiRequest('/events', 'POST', ev); },
+    updateEvent: function(id, patch){ return apiRequest('/events/'+id, 'PUT', patch); },
+    deleteEvent: function(id){ return apiRequest('/events/'+id, 'DELETE'); },
+    getAlbums: function(){ return apiRequest('/albums'); },
+    createAlbum: function(name){ return apiRequest('/albums', 'POST', { name: name }); },
+    deleteAlbum: function(id){ return apiRequest('/albums/'+id, 'DELETE'); },
+    addPhotos: function(albumId, photos){ return apiRequest('/albums/'+albumId+'/photos', 'POST', { photos: photos }); },
+    updatePhoto: function(albumId, photoId, patch){ return apiRequest('/albums/'+albumId+'/photos/'+photoId, 'PUT', patch); },
+    deletePhoto: function(albumId, photoId){ return apiRequest('/albums/'+albumId+'/photos/'+photoId, 'DELETE'); },
+    getMembers: function(){ return apiRequest('/members'); },
+    upsertMember: function(m){ return apiRequest('/members', 'POST', m); },
+    verifyPasscode: function(code){ return apiRequest('/verify-passcode', 'POST', { code: code }); }
+  };
+
+  /* ============================= STATE ============================= */
+  // `state.user` is this browser's own session (who am I) and stays local.
+  // `state.events` / `state.albums` / `state.members` are the shared
+  // community data, fetched from — and saved back to — the backend server.
+  var state = { user: loadSession(), events: [], albums: [], members: [] };
+
+  function loadSession(){
+    try {
+      var raw = localStorage.getItem(SESSION_KEY);
+      if(raw) return JSON.parse(raw);
+    } catch(e){ console.warn("Could not read saved session", e); }
+    return null;
+  }
+  function saveState(){
+    try { localStorage.setItem(SESSION_KEY, JSON.stringify(state.user)); }
+    catch(e){ console.warn("Could not save session", e); }
+  }
+
+  function loadCommunityData(){
+    return Promise.all([api.getEvents(), api.getAlbums(), api.getMembers()]).then(function(results){
+      state.events = results[0];
+      state.albums = results[1];
+      state.members = results[2];
+    }).catch(function(e){
+      toast('Could not reach the server — is it running?', 'error');
+      console.error(e);
+    });
+  }
+
+  /* ============================= HELPERS ============================= */
+
+  function $(sel, root){ return (root||document).querySelector(sel); }
+  function $all(sel, root){ return Array.prototype.slice.call((root||document).querySelectorAll(sel)); }
+  function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html!==undefined) e.innerHTML = html; return e; }
+  function esc(str){ var d = document.createElement('div'); d.textContent = str==null?"":String(str); return d.innerHTML; }
+  function isMember(){ return state.user && state.user.role === 'member'; }
+  function initials(name){
+    if(!name) return "?";
+    var parts = name.trim().split(/\s+/);
+    return (parts[0][0] + (parts[1] ? parts[1][0] : '')).toUpperCase();
+  }
+  function formatDate(dateStr){
+    var d = new Date(dateStr + "T00:00:00");
+    return d.toLocaleDateString(undefined, { weekday:'short', month:'short', day:'numeric', year:'numeric' });
+  }
+  function formatTime(t){
+    if(!t) return "";
+    var parts = t.split(':'); var h = parseInt(parts[0],10); var m = parts[1];
+    var ampm = h >= 12 ? 'PM' : 'AM'; var h12 = h % 12 || 12;
+    return h12 + ':' + m + ' ' + ampm;
+  }
+  function isPast(dateStr){
+    var today = new Date(); today.setHours(0,0,0,0);
+    return new Date(dateStr + "T00:00:00") < today;
+  }
+
+  /* ============================= TOASTS ============================= */
+  function toast(message, type){
+    type = type || 'info';
+    var colors = { success:'bg-maroon text-white', info:'bg-ink text-cream', error:'bg-maroon-700 text-white' };
+    var t = el('div', 'px-4 py-3 rounded-xl shadow-lg text-sm font-medium max-w-xs rise-in ' + (colors[type]||colors.info), esc(message));
+    $('#toastContainer').appendChild(t);
+    setTimeout(function(){
+      t.style.transition = 'opacity 0.4s ease'; t.style.opacity = '0';
+      setTimeout(function(){ t.remove(); }, 400);
+    }, 2800);
+  }
+
+  /* ============================= MODALS ============================= */
+  function openModal(id){ var m = $('#'+id); m.classList.remove('hidden'); m.classList.add('flex'); }
+  function closeModal(id){ var m = $('#'+id); m.classList.add('hidden'); m.classList.remove('flex'); }
+  $all('[data-close-modal]').forEach(function(btn){
+    btn.addEventListener('click', function(){ closeModal(btn.getAttribute('data-close-modal')); });
+  });
+  $all('.modal-overlay').forEach(function(overlay){
+    overlay.addEventListener('click', function(e){ if(e.target === overlay) overlay.classList.add('hidden'), overlay.classList.remove('flex'); });
+  });
+
+  var confirmCallback = null;
+  function askConfirm(title, body, actionLabel, cb){
+    $('#confirmTitle').textContent = title;
+    $('#confirmBody').textContent = body;
+    $('#btnConfirmAction').textContent = actionLabel || 'Delete';
+    confirmCallback = cb;
+    openModal('modalConfirm');
+  }
+  $('#btnConfirmAction').addEventListener('click', function(){
+    if(confirmCallback) confirmCallback();
+    confirmCallback = null;
+    closeModal('modalConfirm');
+  });
+
+  /* ============================= AUTH FLOW ============================= */
+  function renderAuthState(){
+    if(state.user){
+      $('#authOverlay').classList.add('hidden-important');
+      $('#app').classList.remove('hidden-important');
+      $('#userBadge').classList.remove('hidden'); $('#userBadge').classList.add('flex');
+      renderAvatarInto($('#userAvatar'), state.user);
+      $('#userNameLabel').textContent = state.user.role === 'member' ? state.user.name + ' · Member' : state.user.name;
+    } else {
+      $('#authOverlay').classList.remove('hidden-important');
+      $('#app').classList.add('hidden-important');
+    }
+    updateHubLockIcon();
+  }
+
+  function renderAvatarInto(node, user){
+    if(user && user.photo){
+      node.innerHTML = '<img src="'+user.photo+'" class="w-full h-full object-cover" alt="">';
+    } else {
+      node.innerHTML = '';
+      node.textContent = initials(user ? user.name : '');
+    }
+  }
+
+  $('#btnGoogleSignIn').addEventListener('click', function(){
+    $('#authStepGoogle').classList.add('hidden-important');
+    $('#authStepName').classList.remove('hidden-important');
+    $('#authNameInput').focus();
+  });
+  $('#btnCompleteSignIn').addEventListener('click', completeSignIn);
+  $('#authNameInput').addEventListener('keydown', function(e){ if(e.key==='Enter') completeSignIn(); });
+
+  function completeSignIn(){
+    var name = $('#authNameInput').value.trim();
+    if(!name){ toast('Please enter your name to continue.', 'error'); return; }
+    $('#authStepName').classList.add('hidden-important');
+    $('#authStepLoading').classList.remove('hidden-important');
+    setTimeout(function(){
+      var email = name.toLowerCase().replace(/[^a-z]+/g,'.').replace(/^\.+|\.+$/g,'') + '@gmail.com';
+      state.user = { id: uid(), name: name, email: email, role: 'guest' };
+      saveState();
+      $('#authStepLoading').classList.add('hidden-important');
+      $('#authStepGoogle').classList.remove('hidden-important');
+      $('#authStepName').classList.add('hidden-important');
+      $('#authNameInput').value = '';
+      renderAuthState();
+      toast('Welcome, ' + name.split(' ')[0] + '.', 'success');
+      $('#app').classList.add('hidden-important');
+      $('#bootLoading').classList.remove('hidden-important');
+      loadCommunityData().then(function(){
+        $('#bootLoading').classList.add('hidden-important');
+        $('#app').classList.remove('hidden-important');
+        goToPage('home');
+      });
+    }, 900);
+  }
+
+  /* ============================= NAVIGATION ============================= */
+  function goToPage(page){
+    $all('.page-view').forEach(function(v){ v.classList.add('hidden'); });
+    var target = $('[data-view="'+page+'"]');
+    if(target) target.classList.remove('hidden');
+    $all('.nav-link').forEach(function(l){ l.classList.toggle('active', l.getAttribute('data-page')===page); });
+    $('#navMembersHub').classList.toggle('active', page === 'hub');
+    window.scrollTo({top:0, behavior:'instant' in window ? 'instant':'auto'});
+    if(page === 'events') renderEvents();
+    if(page === 'gallery') renderAlbums();
+    if(page === 'hub') renderHub();
+    if(page === 'home') renderHome();
+    if(page === 'calendar') renderCalendar();
+  }
+  $all('.nav-link[data-page]').forEach(function(b){ b.addEventListener('click', function(){ goToPage(b.getAttribute('data-page')); }); });
+
+  function updateHubLockIcon(){
+    var lock = $('#hubLockIcon');
+    if(isMember()){
+      lock.innerHTML = '<path d="M8 10V7a4 4 0 118 0v3" stroke-dasharray="0"/><rect x="4" y="10" width="16" height="10" rx="2"/><circle cx="12" cy="14.5" r="1.4" fill="currentColor" stroke="none"/>';
+      lock.classList.add('text-saffron-700');
+    } else {
+      lock.innerHTML = '<rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/>';
+      lock.classList.remove('text-saffron-700');
+    }
+  }
+
+  function handleMembersHubClick(){
+    goToPage('hub');
+  }
+  $('#navMembersHub').addEventListener('click', handleMembersHubClick);
+  $('#btnHubEnterPasscode').addEventListener('click', function(){
+    $('#passcodeInput').value = '';
+    $('#passcodeError').classList.add('hidden');
+    openModal('modalPasscode');
+    setTimeout(function(){ $('#passcodeInput').focus(); }, 50);
+  });
+
+  $('#btnSubmitPasscode').addEventListener('click', submitPasscode);
+  $('#passcodeInput').addEventListener('keydown', function(e){ if(e.key==='Enter') submitPasscode(); });
+  function submitPasscode(){
+    var val = $('#passcodeInput').value.trim();
+    if(!val){ $('#passcodeError').classList.remove('hidden'); return; }
+    $('#btnSubmitPasscode').disabled = true;
+    api.verifyPasscode(val).then(function(res){
+      $('#btnSubmitPasscode').disabled = false;
+      if(res.ok){
+        var isFirstTime = state.user.role !== 'member';
+        state.user.role = 'member';
+        saveState();
+        return upsertMemberDirectory().then(function(){
+          closeModal('modalPasscode');
+          renderAuthState();
+          toast('Verified — you now have member access.', 'success');
+          if(isFirstTime){
+            openMemberProfileModal();
+          } else {
+            goToPage('hub');
+          }
+        });
+      } else {
+        $('#passcodeError').classList.remove('hidden');
+      }
+    }).catch(function(){
+      $('#btnSubmitPasscode').disabled = false;
+      toast('Could not reach the server — is it running?', 'error');
+    });
+  }
+
+  function upsertMemberDirectory(){
+    if(!state.user || state.user.role !== 'member') return Promise.resolve();
+    var entry = { id: state.user.id, name: state.user.name, photo: state.user.photo || '', mobile: state.user.mobile || '', whatsapp: state.user.whatsapp || '' };
+    return api.upsertMember(entry).then(function(saved){
+      var idx = state.members.findIndex(function(m){ return m.id === saved.id; });
+      if(idx > -1) state.members[idx] = saved; else state.members.push(saved);
+    });
+  }
+
+  /* ---- Member profile: photo, mobile, WhatsApp ---- */
+  var pendingProfilePhoto = null;
+  function openMemberProfileModal(){
+    pendingProfilePhoto = state.user.photo || null;
+    renderAvatarInto($('#mpAvatarPreview'), state.user);
+    $('#mpMobile').value = state.user.mobile || '';
+    $('#mpWhatsapp').value = state.user.whatsapp || '';
+    $('#mpSameAsMobile').checked = !!state.user.mobile && state.user.mobile === state.user.whatsapp;
+    openModal('modalMemberProfile');
+  }
+  $('#btnEditMemberProfile').addEventListener('click', openMemberProfileModal);
+
+  $('#mpPhotoInput').addEventListener('change', function(){
+    var file = this.files[0];
+    if(!file) return;
+    compressImage(file, 500, 0.75).then(function(dataUrl){
+      pendingProfilePhoto = dataUrl;
+      $('#mpAvatarPreview').innerHTML = '<img src="'+dataUrl+'" class="w-full h-full object-cover" alt="">';
+    });
+  });
+  $('#mpSameAsMobile').addEventListener('change', function(){
+    if(this.checked) $('#mpWhatsapp').value = $('#mpMobile').value;
+  });
+  $('#mpMobile').addEventListener('input', function(){
+    if($('#mpSameAsMobile').checked) $('#mpWhatsapp').value = this.value;
+  });
+
+  function saveMemberProfile(){
+    if(pendingProfilePhoto) state.user.photo = pendingProfilePhoto;
+    state.user.mobile = $('#mpMobile').value.trim();
+    state.user.whatsapp = $('#mpSameAsMobile').checked ? state.user.mobile : $('#mpWhatsapp').value.trim();
+    saveState();
+    renderAuthState();
+    return upsertMemberDirectory().then(function(){
+      closeModal('modalMemberProfile');
+      goToPage('hub');
+    });
+  }
+  $('#btnSaveMemberProfile').addEventListener('click', function(){
+    $('#btnSaveMemberProfile').disabled = true;
+    saveMemberProfile().then(function(){
+      $('#btnSaveMemberProfile').disabled = false;
+      toast('Profile saved.', 'success');
+      renderHomeMembers();
+    }).catch(function(){
+      $('#btnSaveMemberProfile').disabled = false;
+      toast('Could not save — is the server running?', 'error');
+    });
+  });
+  $('#btnSkipMemberProfile').addEventListener('click', function(){
+    closeModal('modalMemberProfile');
+    goToPage('hub');
+  });
+
+  $('#btnLeaveMembership').addEventListener('click', function(){
+    state.user.role = 'guest';
+    saveState();
+    renderAuthState();
+    goToPage('home');
+    toast("You're viewing as a guest again.", 'info');
+  });
+
+  /* ============================= IMAGE COMPRESSION ============================= */
+  function compressImage(file, maxW, quality){
+    maxW = maxW || 1100; quality = quality || 0.72;
+    return new Promise(function(resolve, reject){
+      var reader = new FileReader();
+      reader.onload = function(e){
+        var img = new Image();
+        img.onload = function(){
+          var scale = Math.min(1, maxW / img.width);
+          var canvas = document.createElement('canvas');
+          canvas.width = Math.round(img.width * scale);
+          canvas.height = Math.round(img.height * scale);
+          var ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          resolve(canvas.toDataURL('image/jpeg', quality));
+        };
+        img.onerror = reject;
+        img.src = e.target.result;
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  }
+
+  /* ============================= HOME PAGE ============================= */
+  function renderHome(){
+    renderHomeTithi();
+    var approved = state.events.filter(function(ev){ return ev.status === 'approved'; });
+    var upcoming = approved.filter(function(ev){ return !isPast(ev.date); })
+      .sort(function(a,b){ return (a.date+a.time) < (b.date+b.time) ? -1 : 1; });
+
+    $('#statUpcoming').textContent = upcoming.length;
+    var totalPhotos = state.albums.reduce(function(sum,a){ return sum + a.photos.length; }, 0);
+    $('#statAlbums').textContent = state.albums.length;
+    $('#statPhotos').textContent = totalPhotos;
+    $('#statMembers').textContent = state.members.length;
+
+    renderHomeMembers();
+
+    var wrap = $('#homeUpcomingList');
+    wrap.innerHTML = '';
+    if(upcoming.length === 0){
+      wrap.innerHTML = '<p class="text-slate text-sm col-span-full">No upcoming events yet — check back soon.</p>';
+      return;
+    }
+    upcoming.slice(0,3).forEach(function(ev){ wrap.appendChild(eventCard(ev, {compact:true})); });
+  }
+
+  function renderHomeMembers(){
+    $('#memberCountLabel').textContent = state.members.length + ' member' + (state.members.length===1 ? '' : 's');
+    var wrap = $('#homeMembersList'); wrap.innerHTML = '';
+    $('#homeMembersEmpty').classList.toggle('hidden', state.members.length > 0);
+    state.members.forEach(function(m){
+      var item = el('div', 'flex flex-col items-center gap-2 w-20 text-center');
+      var avatar = el('span', 'w-16 h-16 rounded-full bg-saffron text-white text-lg font-semibold flex items-center justify-center overflow-hidden shrink-0');
+      renderAvatarInto(avatar, m);
+      var label = el('p', 'text-xs font-medium text-ink/80 line-clamp-2', esc(m.name));
+      item.appendChild(avatar); item.appendChild(label);
+      wrap.appendChild(item);
+    });
+  }
+
+  /* ============================= EVENTS PAGE ============================= */
+  var activeCategory = 'All';
+
+  function renderCategoryChips(){
+    var wrap = $('#eventCategoryChips');
+    wrap.innerHTML = '';
+    ['All'].concat(CATEGORIES).forEach(function(cat){
+      var chip = el('button', 'px-3.5 py-1.5 rounded-full text-xs font-medium border transition-colors ' +
+        (activeCategory===cat ? 'bg-maroon text-white border-maroon' : 'bg-white border-ink/15 text-slate hover:border-ink/30'), esc(cat));
+      chip.addEventListener('click', function(){ activeCategory = cat; renderEvents(); });
+      wrap.appendChild(chip);
+    });
+  }
+
+  function eventCard(ev, opts){
+    opts = opts || {};
+    var card = el('div', 'card-surface rounded-2xl overflow-hidden hover:shadow-md transition-shadow cursor-pointer flex flex-col');
+    var img = ev.image ? '<img src="'+ev.image+'" class="w-full h-36 object-cover" alt="">' :
+      '<div class="w-full h-36 bg-gradient-to-br from-saffron-100 to-sand flex items-center justify-center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B85A1E" stroke-width="1.6"><path d="M8 2v4M16 2v4M3 10h18M5 6h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z"/></svg></div>';
+    var badge = ev.status === 'pending' ? '<span class="text-xs font-medium text-saffron-700 bg-saffron-50 rounded-full px-2 py-0.5">Pending</span>' : '';
+    var pastTag = isPast(ev.date) ? '<span class="text-xs text-slate">Past</span>' : '';
+    card.innerHTML =
+      img +
+      '<div class="p-4 flex-1 flex flex-col">' +
+        '<div class="flex items-center gap-2 mb-2">' +
+          '<span class="text-xs font-medium text-saffron-700 bg-saffron-50 rounded-full px-2 py-0.5">'+esc(ev.category)+'</span>' + badge + pastTag +
+        '</div>' +
+        '<h3 class="font-display font-semibold text-base mb-1.5 leading-snug">'+esc(ev.title)+'</h3>' +
+        '<p class="text-xs text-slate mb-1">'+formatDate(ev.date)+ (ev.time ? ' · ' + formatTime(ev.time) : '')+'</p>' +
+        '<p class="text-xs text-slate mb-2">'+esc(ev.location)+'</p>' +
+        (opts.compact ? '' : '<p class="text-sm text-ink/70 line-clamp-2 mt-auto">'+esc(ev.description)+'</p>') +
+      '</div>';
+    card.addEventListener('click', function(){ openEventDetail(ev.id); });
+    return card;
+  }
+
+  function renderEvents(){
+    renderCategoryChips();
+    var approved = state.events.filter(function(ev){ return ev.status === 'approved'; });
+    var filtered = activeCategory === 'All' ? approved : approved.filter(function(ev){ return ev.category === activeCategory; });
+    filtered.sort(function(a,b){
+      var ap = isPast(a.date), bp = isPast(b.date);
+      if(ap !== bp) return ap ? 1 : -1;
+      return (a.date+a.time) < (b.date+b.time) ? -1 : 1;
+    });
+    var wrap = $('#eventsList'); wrap.innerHTML = '';
+    $('#eventsEmpty').classList.toggle('hidden', filtered.length > 0);
+    filtered.forEach(function(ev){ wrap.appendChild(eventCard(ev)); });
+  }
+
+  $('#btnAddEvent').addEventListener('click', function(){
+    openEventForm(null);
+  });
+
+  var editingEventId = null;
+  function openEventForm(eventId){
+    editingEventId = eventId;
+    var ev = eventId ? state.events.find(function(e){ return e.id===eventId; }) : null;
+    $('#eventFormTitle').textContent = ev ? 'Edit event' : 'Submit an event';
+    $('#efTitle').value = ev ? ev.title : '';
+    $('#efDate').value = ev ? ev.date : '';
+    $('#efTime').value = ev ? ev.time : '';
+    $('#efLocation').value = ev ? ev.location : '';
+    $('#efCategory').value = ev ? ev.category : 'Darshan';
+    $('#efDescription').value = ev ? ev.description : '';
+    $('#efImage').value = '';
+    var preview = $('#efImagePreview');
+    if(ev && ev.image){ preview.src = ev.image; preview.classList.remove('hidden'); } else { preview.classList.add('hidden'); }
+    openModal('modalEventForm');
+  }
+
+  $('#efImage').addEventListener('change', function(){
+    var file = this.files[0];
+    if(!file) return;
+    compressImage(file, 1000, 0.72).then(function(dataUrl){
+      var preview = $('#efImagePreview');
+      preview.src = dataUrl; preview.classList.remove('hidden');
+      preview.dataset.pending = dataUrl;
+    });
+  });
+
+  $('#btnSaveEvent').addEventListener('click', function(){
+    var title = $('#efTitle').value.trim();
+    var date = $('#efDate').value;
+    var time = $('#efTime').value;
+    var location = $('#efLocation').value.trim();
+    var category = $('#efCategory').value;
+    var description = $('#efDescription').value.trim();
+    if(!title || !date || !location){ toast('Please fill in title, date and location.', 'error'); return; }
+    var preview = $('#efImagePreview');
+    var image = preview.dataset.pending || (!preview.classList.contains('hidden') ? preview.src : '');
+
+    $('#btnSaveEvent').disabled = true;
+    var request;
+    if(editingEventId){
+      var existing = state.events.find(function(e){ return e.id===editingEventId; });
+      request = api.updateEvent(editingEventId, { title:title, date:date, time:time, location:location, category:category, description:description, image: image || existing.image })
+        .then(function(updated){
+          var idx = state.events.findIndex(function(e){ return e.id===editingEventId; });
+          state.events[idx] = updated;
+          toast('Event updated.', 'success');
+        });
+    } else {
+      request = api.createEvent({ title:title, date:date, time:time, location:location, category:category, description:description, image:image, submittedBy: state.user.name })
+        .then(function(created){
+          state.events.push(created);
+          toast('Submitted for approval.', 'success');
+        });
+    }
+    request.then(function(){
+      closeModal('modalEventForm');
+      delete preview.dataset.pending;
+      renderEvents(); renderHome(); if(isMember()) renderHub();
+    }).catch(function(){
+      toast('Could not save — is the server running?', 'error');
+    }).finally(function(){
+      $('#btnSaveEvent').disabled = false;
+    });
+  });
+
+  var currentDetailEventId = null;
+  function openEventDetail(id){
+    var ev = state.events.find(function(e){ return e.id===id; });
+    if(!ev) return;
+    currentDetailEventId = id;
+    if(ev.image){ $('#edImage').src = ev.image; $('#edImage').classList.remove('hidden'); } else { $('#edImage').classList.add('hidden'); }
+    $('#edCategory').textContent = ev.category;
+    $('#edTitle').textContent = ev.title;
+    $('#edWhen').textContent = formatDate(ev.date) + (ev.time ? ' · ' + formatTime(ev.time) : '');
+    $('#edWhere').textContent = ev.location;
+    $('#edDescription').textContent = ev.description || 'No description provided.';
+    $('#edStatus').textContent = ev.status === 'pending' ? 'Submitted by ' + ev.submittedBy + ' · awaiting approval' : 'Submitted by ' + ev.submittedBy;
+
+    var actions = $('#edMemberActions');
+    if(isMember()){
+      actions.classList.remove('hidden'); actions.classList.add('flex');
+      $('#edApprove').classList.toggle('hidden', ev.status !== 'pending');
+      $('#edReject').classList.toggle('hidden', ev.status !== 'pending');
+    } else {
+      actions.classList.add('hidden'); actions.classList.remove('flex');
+    }
+    openModal('modalEventDetail');
+  }
+
+  $('#edApprove').addEventListener('click', function(){
+    api.updateEvent(currentDetailEventId, { status: 'approved' }).then(function(updated){
+      var idx = state.events.findIndex(function(e){ return e.id===currentDetailEventId; });
+      state.events[idx] = updated;
+      toast('Event approved and published.', 'success');
+      closeModal('modalEventDetail');
+      renderEvents(); renderHome(); renderHub();
+    }).catch(function(){ toast('Could not reach the server.', 'error'); });
+  });
+  $('#edReject').addEventListener('click', function(){
+    askConfirm('Reject this event?', 'It will be removed and the submitter will need to resubmit.', 'Reject', function(){
+      api.deleteEvent(currentDetailEventId).then(function(){
+        state.events = state.events.filter(function(e){ return e.id!==currentDetailEventId; });
+        toast('Event rejected.', 'info');
+        closeModal('modalEventDetail');
+        renderEvents(); renderHome(); renderHub();
+      }).catch(function(){ toast('Could not reach the server.', 'error'); });
+    });
+  });
+  $('#edEdit').addEventListener('click', function(){
+    closeModal('modalEventDetail');
+    openEventForm(currentDetailEventId);
+  });
+  $('#edDelete').addEventListener('click', function(){
+    askConfirm('Delete this event?', 'This can\'t be undone.', 'Delete', function(){
+      api.deleteEvent(currentDetailEventId).then(function(){
+        state.events = state.events.filter(function(e){ return e.id!==currentDetailEventId; });
+        toast('Event deleted.', 'info');
+        closeModal('modalEventDetail');
+        renderEvents(); renderHome(); renderHub();
+      }).catch(function(){ toast('Could not reach the server.', 'error'); });
+    });
+  });
+
+  /* ============================= GALLERY PAGE ============================= */
+  var currentAlbumId = null;
+
+  function renderAlbums(){
+    $('#galleryAlbumView').classList.add('hidden');
+    $('#galleryAlbumsView').classList.remove('hidden');
+    var wrap = $('#albumsGrid'); wrap.innerHTML = '';
+    state.albums.forEach(function(album){
+      var cover = album.photos.length ? album.photos[album.photos.length-1].src : '';
+      var card = el('div', 'card-surface rounded-2xl overflow-hidden hover:shadow-md transition-shadow cursor-pointer');
+      card.innerHTML =
+        (cover ? '<img src="'+cover+'" class="w-full h-40 object-cover" alt="">' :
+          '<div class="w-full h-40 bg-gradient-to-br from-sand to-saffron-100 flex items-center justify-center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#B85A1E" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 15l-5-5-4 4-3-3-5 5"/></svg></div>') +
+        '<div class="p-4"><h3 class="font-display font-semibold">'+esc(album.name)+'</h3><p class="text-xs text-slate mt-1">'+album.photos.length+' photo'+(album.photos.length===1?'':'s')+'</p></div>';
+      card.addEventListener('click', function(){ openAlbum(album.id); });
+      wrap.appendChild(card);
+    });
+  }
+
+  function openAlbum(id){
+    currentAlbumId = id;
+    var album = state.albums.find(function(a){ return a.id===id; });
+    $('#galleryAlbumsView').classList.add('hidden');
+    $('#galleryAlbumView').classList.remove('hidden');
+    $('#albumViewTitle').textContent = album.name;
+    $('#albumViewMeta').textContent = album.photos.length + ' photo' + (album.photos.length===1?'':'s');
+    $('#btnUploadPhotos').classList.toggle('hidden', !isMember());
+    $('#btnDeleteAlbum').classList.toggle('hidden', !isMember());
+    renderAlbumPhotos();
+  }
+  $('#btnBackToAlbums').addEventListener('click', renderAlbums);
+
+  function renderAlbumPhotos(){
+    var album = state.albums.find(function(a){ return a.id===currentAlbumId; });
+    var wrap = $('#albumPhotosGrid'); wrap.innerHTML = '';
+    $('#albumEmptyMsg').classList.toggle('hidden', album.photos.length > 0);
+    album.photos.slice().reverse().forEach(function(photo){
+      var tile = el('div', 'aspect-square rounded-xl overflow-hidden cursor-pointer relative group');
+      tile.innerHTML = '<img src="'+photo.src+'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="'+esc(photo.caption)+'">';
+      tile.addEventListener('click', function(){ openPhotoDetail(photo.id); });
+      wrap.appendChild(tile);
+    });
+  }
+
+  $('#btnAddAlbum').addEventListener('click', function(){
+    if(!isMember()){ toast('Only verified members can create albums.', 'error'); return; }
+    $('#afName').value = '';
+    openModal('modalAlbumForm');
+    setTimeout(function(){ $('#afName').focus(); }, 50);
+  });
+  $('#btnSaveAlbum').addEventListener('click', function(){
+    var name = $('#afName').value.trim();
+    if(!name){ toast('Give the album a name.', 'error'); return; }
+    api.createAlbum(name).then(function(album){
+      state.albums.push(album);
+      closeModal('modalAlbumForm');
+      renderAlbums();
+      renderHome();
+      toast('Album created.', 'success');
+    }).catch(function(){ toast('Could not reach the server.', 'error'); });
+  });
+
+  $('#btnDeleteAlbum').addEventListener('click', function(){
+    var album = state.albums.find(function(a){ return a.id===currentAlbumId; });
+    askConfirm('Delete "'+album.name+'"?', 'All '+album.photos.length+' photos inside will be removed too.', 'Delete album', function(){
+      api.deleteAlbum(currentAlbumId).then(function(){
+        state.albums = state.albums.filter(function(a){ return a.id!==currentAlbumId; });
+        renderAlbums();
+        renderHome();
+        toast('Album deleted.', 'info');
+      }).catch(function(){ toast('Could not reach the server.', 'error'); });
+    });
+  });
+
+  $('#btnUploadPhotos').addEventListener('click', function(){
+    if(!isMember()) return;
+    var input = document.createElement('input');
+    input.type = 'file'; input.accept = 'image/*'; input.multiple = true;
+    input.addEventListener('change', function(){
+      var files = Array.prototype.slice.call(input.files);
+      if(!files.length) return;
+      toast('Uploading ' + files.length + ' photo' + (files.length===1?'':'s') + '…', 'info');
+      Promise.all(files.map(function(f){ return compressImage(f, 1200, 0.72); })).then(function(dataUrls){
+        var album = state.albums.find(function(a){ return a.id===currentAlbumId; });
+        var photos = dataUrls.map(function(src){ return { src: src, caption: '', description: '', uploader: state.user.name }; });
+        return api.addPhotos(currentAlbumId, photos).then(function(created){
+          album.photos.push.apply(album.photos, created);
+          renderAlbumPhotos();
+          renderAlbums();
+          renderHome();
+          toast('Photos added to '+album.name+'.', 'success');
+        });
+      }).catch(function(){ toast('Something went wrong uploading those photos.', 'error'); });
+    });
+    input.click();
+  });
+
+  var currentPhotoId = null;
+  function openPhotoDetail(photoId){
+    var album = state.albums.find(function(a){ return a.id===currentAlbumId; });
+    var photo = album.photos.find(function(p){ return p.id===photoId; });
+    currentPhotoId = photoId;
+    $('#pdImage').src = photo.src;
+    $('#pdCaption').textContent = photo.caption || 'Untitled photo';
+    $('#pdDescription').textContent = photo.description || 'No description added.';
+    $('#pdUploader').textContent = photo.uploader;
+    $('#pdDate').textContent = new Date(photo.uploadedAt).toLocaleDateString(undefined, { month:'short', day:'numeric', year:'numeric' });
+    var actions = $('#pdMemberActions');
+    if(isMember()){ actions.classList.remove('hidden'); actions.classList.add('flex'); } else { actions.classList.add('hidden'); actions.classList.remove('flex'); }
+    openModal('modalPhotoDetail');
+  }
+
+  $('#pdEdit').addEventListener('click', function(){
+    var album = state.albums.find(function(a){ return a.id===currentAlbumId; });
+    var photo = album.photos.find(function(p){ return p.id===currentPhotoId; });
+    $('#peCaption').value = photo.caption || '';
+    $('#peDescription').value = photo.description || '';
+    closeModal('modalPhotoDetail');
+    openModal('modalPhotoEdit');
+  });
+  $('#btnSavePhotoEdit').addEventListener('click', function(){
+    var caption = $('#peCaption').value.trim();
+    var description = $('#peDescription').value.trim();
+    api.updatePhoto(currentAlbumId, currentPhotoId, { caption: caption, description: description }).then(function(updated){
+      var album = state.albums.find(function(a){ return a.id===currentAlbumId; });
+      var photo = album.photos.find(function(p){ return p.id===currentPhotoId; });
+      photo.caption = updated.caption; photo.description = updated.description;
+      closeModal('modalPhotoEdit');
+      renderAlbumPhotos();
+      toast('Photo details saved.', 'success');
+    }).catch(function(){ toast('Could not reach the server.', 'error'); });
+  });
+  $('#pdDelete').addEventListener('click', function(){
+    askConfirm('Delete this photo?', 'This can\'t be undone.', 'Delete', function(){
+      api.deletePhoto(currentAlbumId, currentPhotoId).then(function(){
+        var album = state.albums.find(function(a){ return a.id===currentAlbumId; });
+        album.photos = album.photos.filter(function(p){ return p.id!==currentPhotoId; });
+        closeModal('modalPhotoDetail');
+        renderAlbumPhotos();
+        renderAlbums();
+        renderHome();
+        toast('Photo deleted.', 'info');
+      }).catch(function(){ toast('Could not reach the server.', 'error'); });
+    });
+  });
+
+  /* ============================= MEMBERS HUB ============================= */
+  $all('.hub-tab').forEach(function(tab){
+    tab.addEventListener('click', function(){
+      $all('.hub-tab').forEach(function(t){ t.classList.remove('active'); });
+      tab.classList.add('active');
+      $all('.hub-panel').forEach(function(p){ p.classList.add('hidden'); });
+      $('[data-hubpanel="'+tab.getAttribute('data-hubtab')+'"]').classList.remove('hidden');
+    });
+  });
+
+  function renderHub(){
+    var member = isMember();
+    $('#hubGuestCta').classList.toggle('hidden', member);
+    $('#hubIntroText').textContent = member
+      ? 'Review requests and manage everything shown to the community.'
+      : 'See who keeps SSMV running. Enter the member passcode to help out.';
+
+    $all('.hub-tab-member').forEach(function(t){ t.classList.toggle('hidden', !member); });
+    if(!member){
+      $all('.hub-tab').forEach(function(t){ t.classList.remove('active'); });
+      $('[data-hubtab="directory"]').classList.add('active');
+      $all('.hub-panel').forEach(function(p){ p.classList.add('hidden'); });
+      $('[data-hubpanel="directory"]').classList.remove('hidden');
+    } else if(!$('.hub-tab.active') || $('.hub-tab.active').classList.contains('hidden')){
+      $all('.hub-tab').forEach(function(t){ t.classList.remove('active'); });
+      $('[data-hubtab="directory"]').classList.add('active');
+      $all('.hub-panel').forEach(function(p){ p.classList.add('hidden'); });
+      $('[data-hubpanel="directory"]').classList.remove('hidden');
+    }
+
+    // Members directory — visible to everyone, including contact numbers.
+    $('#memberCountBadge').textContent = state.members.length || '';
+    $('#memberCountBadge').classList.toggle('hidden', state.members.length === 0);
+    var dirWrap = $('#membersDirectoryList'); dirWrap.innerHTML = '';
+    $('#membersDirectoryEmpty').classList.toggle('hidden', state.members.length > 0);
+    state.members.forEach(function(m){
+      var row = el('div', 'card-surface rounded-xl p-4 flex items-center gap-3');
+      var avatar = el('span', 'w-11 h-11 rounded-full bg-saffron text-white text-sm font-semibold flex items-center justify-center overflow-hidden shrink-0');
+      renderAvatarInto(avatar, m);
+      var info = el('div', 'min-w-0 flex-1');
+      var contactLine = [m.mobile ? 'Mobile: '+m.mobile : '', m.whatsapp ? 'WhatsApp: '+m.whatsapp : ''].filter(Boolean).join(' · ');
+      info.innerHTML = '<p class="font-medium text-sm truncate">'+esc(m.name)+'</p>' +
+        (contactLine ? '<p class="text-xs text-slate mt-0.5">'+esc(contactLine)+'</p>' : '<p class="text-xs text-slate mt-0.5">Verified Member</p>');
+      row.appendChild(avatar); row.appendChild(info);
+      dirWrap.appendChild(row);
+    });
+
+    if(!member) return;
+
+    renderAvatarInto($('#profileAvatarWrap'), state.user);
+    $('#profileNameLabel').textContent = state.user.name;
+    $('#profileMobile').textContent = state.user.mobile ? state.user.mobile : 'Mobile not added yet';
+    $('#profileWhatsapp').textContent = state.user.whatsapp ? state.user.whatsapp : 'WhatsApp not added yet';
+
+    var pending = state.events.filter(function(e){ return e.status==='pending'; });
+    $('#pendingCountBadge').textContent = pending.length || '';
+    $('#pendingCountBadge').classList.toggle('hidden', pending.length===0);
+    var pendingWrap = $('#pendingList'); pendingWrap.innerHTML = '';
+    $('#pendingEmptyMsg').classList.toggle('hidden', pending.length>0);
+    pending.forEach(function(ev){ pendingWrap.appendChild(eventCard(ev)); });
+
+    var manageWrap = $('#manageList'); manageWrap.innerHTML = '';
+    state.events.slice().sort(function(a,b){ return (a.date+a.time) < (b.date+b.time) ? -1 : 1; }).forEach(function(ev){
+      var row = el('div', 'card-surface rounded-xl p-4 flex flex-wrap items-center justify-between gap-3');
+      var statusColor = ev.status==='pending' ? 'text-saffron-700 bg-saffron-50' : 'text-maroon bg-maroon-50';
+      row.innerHTML =
+        '<div class="min-w-0">' +
+          '<p class="font-medium text-sm truncate">'+esc(ev.title)+'</p>' +
+          '<p class="text-xs text-slate mt-0.5">'+formatDate(ev.date)+' · '+esc(ev.category)+
+            ' · <span class="'+statusColor+' rounded-full px-2 py-0.5">'+ev.status+'</span></p>' +
+        '</div>';
+      var actions = el('div', 'flex gap-2 shrink-0');
+      var editBtn = el('button', 'text-xs font-medium border border-ink/15 rounded-lg px-3 py-1.5 hover:bg-ink/5', 'Edit');
+      editBtn.addEventListener('click', function(){ openEventForm(ev.id); });
+      var delBtn = el('button', 'text-xs font-medium border border-maroon/30 text-maroon rounded-lg px-3 py-1.5 hover:bg-maroon-50', 'Delete');
+      delBtn.addEventListener('click', function(){
+        askConfirm('Delete "'+ev.title+'"?', 'This can\'t be undone.', 'Delete', function(){
+          api.deleteEvent(ev.id).then(function(){
+            state.events = state.events.filter(function(e){ return e.id!==ev.id; });
+            renderHub(); renderEvents(); renderHome();
+            toast('Event deleted.', 'info');
+          }).catch(function(){ toast('Could not reach the server.', 'error'); });
+        });
+      });
+      actions.appendChild(editBtn); actions.appendChild(delBtn);
+      row.appendChild(actions);
+      manageWrap.appendChild(row);
+    });
+  }
+
+  /* ============================= PANCHANG CALENDAR ============================= */
+
+  // Anchor points transcribed from the official BAPS Swaminarayan Sanstha 2026
+  // Ekadashi/Nom/Punam calendar (baps.org/Calendar/2026). Each entry is
+  // [date, lunar-month label, tithi index 0-29 within that lunar month].
+  var EKADASHI_ANCHORS_2026 = [
+    ['2026-01-03','Posh',14], ['2026-01-14','Posh',25],
+    ['2026-01-27','Maha',8], ['2026-01-29','Maha',10], ['2026-02-01','Maha',14], ['2026-02-13','Maha',25],
+    ['2026-02-25','Fagan',8], ['2026-02-27','Fagan',10], ['2026-03-02','Fagan',14], ['2026-03-15','Fagan',25],
+    ['2026-03-26','Chaitra',8], ['2026-03-29','Chaitra',10], ['2026-04-02','Chaitra',14], ['2026-04-13','Chaitra',25],
+    ['2026-04-25','Vaishakh',8], ['2026-04-27','Vaishakh',10], ['2026-05-01','Vaishakh',14], ['2026-05-13','Vaishakh',25],
+    ['2026-05-24','Adhik Jeth',8], ['2026-05-27','Adhik Jeth',10], ['2026-05-31','Adhik Jeth',14], ['2026-06-11','Adhik Jeth',25],
+    ['2026-06-23','Jeth',8], ['2026-06-25','Jeth',10], ['2026-06-29','Jeth',14], ['2026-07-11','Jeth',25],
+    ['2026-07-22','Ashadh',8], ['2026-07-25','Ashadh',10], ['2026-07-29','Ashadh',14], ['2026-08-09','Ashadh',25],
+    ['2026-08-21','Shravan',8], ['2026-08-23','Shravan',10], ['2026-08-28','Shravan',14], ['2026-09-07','Shravan',25],
+    ['2026-09-20','Bhadarvo',8], ['2026-09-22','Bhadarvo',10], ['2026-09-26','Bhadarvo',14], ['2026-10-06','Bhadarvo',25],
+    ['2026-10-19','Aso',8], ['2026-10-22','Aso',10], ['2026-10-25','Aso',14], ['2026-11-05','Aso',25],
+    ['2026-11-18','Kartak',8], ['2026-11-21','Kartak',10], ['2026-11-24','Kartak',14], ['2026-12-04','Kartak',25],
+    ['2026-12-18','Magshar',8], ['2026-12-20','Magshar',10], ['2026-12-23','Magshar',14]
+  ];
+
+  // Festivals common across the Swaminarayan Sampraday (dates for 2026, from
+  // the BAPS Swaminarayan Sanstha annual festival list — sampraday-general
+  // days only, no guru-lineage-specific observances).
+  var FESTIVALS_2026 = [
+    ['2026-01-14','Makar Sankranti (Uttarayan)','The sun begins its northward journey — a day for charity, giving grains, clothes and money.'],
+    ['2026-01-23','Vasant Panchami','Marks the onset of spring. For the Sampraday it also marks the day Bhagwan Swaminarayan presented the Shikshapatri in its final form.'],
+    ['2026-01-26','Republic Day','The day India adopted its constitution.'],
+    ['2026-02-15','Mahashivratri','In honour of Lord Shiv — devotees fast and keep vigil through the night.'],
+    ['2026-03-02','Holi','A festival of colour and the triumph of devotion, marked with bonfires the night before.'],
+    ['2026-03-03','Fuldol (Pushpadolotsav)','Celebrates the protection of Prahlad, marked with flowers and colour in the Sampraday.'],
+    ['2026-03-08','Rang Panchami',''],
+    ['2026-03-26','Ram Navami','The birthday of Bhagwan Ram.'],
+    ['2026-03-26','Swaminarayan Jayanti (Hari-Nom)','The birthday of Bhagwan Swaminarayan — one of the most significant days of the year.'],
+    ['2026-04-02','Hanuman Jayanti','The birthday of Hanumanji, devotee of Bhagwan Ram.'],
+    ['2026-04-30','Nrusinh Jayanti','The birthday of Lord Nrusinh.'],
+    ['2026-05-01','Buddha Jayanti','The birthday of Lord Buddha.'],
+    ['2026-07-16','Rathyatra','Murtis of the Lord are paraded through the city in decorated chariots.'],
+    ['2026-07-25','Devpodhi Ekadashi','The first day of Chaturmas, the four holy months of extra devotional observance.'],
+    ['2026-07-29','Guru Purnima','A day to honour and offer gratitude to one\'s guru.'],
+    ['2026-08-15','Independence Day','India\'s independence from British rule, in 1947.'],
+    ['2026-08-28','Raksha Bandhan',''],
+    ['2026-09-04','Janmashtami','The birthday of Bhagwan Krishna.'],
+    ['2026-09-12','Sam Shravani','Sadhus and Samvedi Brahmins change their janoi (sacred thread).'],
+    ['2026-09-14','Ganesh Chaturthi','The birthday of Lord Ganesh.'],
+    ['2026-09-22','Jal Jhilani Ekadashi','The midpoint of Chaturmas — the Lord is taken for a boat ride.'],
+    ['2026-09-23','Vaman Jayanti',''],
+    ['2026-10-11','Navratri begins','Nine nights of prayer to Shri Parvati, celebrating her victory over Mahishasur.'],
+    ['2026-10-20','Vijaya Dashami',''],
+    ['2026-11-05','Vagh Baras','Cows, symbolising Mother Nature, are worshipped.'],
+    ['2026-11-06','Dhan Teras','Wealth is worshipped, with prayers to use it virtuously.'],
+    ['2026-11-07','Kali Chaudas','Prayers offered for protection from harm.'],
+    ['2026-11-08','Diwali','The victory of good over evil — Lakshmiji is worshipped for prosperity.'],
+    ['2026-11-10','Annakut & Bestu Varas','An offering of many foods to the deities, and the first day of the new year.'],
+    ['2026-11-11','Bhai Beej','Brothers are invited to dine at their sister\'s home.'],
+    ['2026-11-21','Prabodhini Ekadashi','The last day of Chaturmas.'],
+    ['2026-11-24','Dev Diwali','Marks the Lord\'s return after Chaturmas.']
+  ];
+
+  var MONTH_CYCLE = ['Chaitra','Vaishakh','Jeth','Ashadh','Shravan','Bhadarvo','Aso','Kartak','Magshar','Posh','Maha','Fagan'];
+  var TITHI_NAMES = ['Padvo','Bij','Trij','Choth','Pancham','Chhath','Saptami','Atham','Nom','Dasham','Ekadashi','Baras','Teras','Chaudas'];
+  var GREG_MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var VASTRAL_LAT = 23.03, VASTRAL_LON = 72.68;
+
+  function pad2(n){ return n < 10 ? '0'+n : ''+n; }
+  function daysBetweenUTC(a, b){
+    var pa = a.split('-').map(Number), pb = b.split('-').map(Number);
+    var ta = Date.UTC(pa[0], pa[1]-1, pa[2]), tb = Date.UTC(pb[0], pb[1]-1, pb[2]);
+    return Math.round((tb - ta) / 86400000);
+  }
+  function todayIST(){
+    return new Intl.DateTimeFormat('en-CA', { timeZone:'Asia/Kolkata', year:'numeric', month:'2-digit', day:'2-digit' }).format(new Date());
+  }
+
+  function getApproxTithi(dateStr){
+    var best = null, bestDist = Infinity;
+    EKADASHI_ANCHORS_2026.forEach(function(a){
+      var dist = Math.abs(daysBetweenUTC(dateStr, a[0]));
+      if(dist < bestDist){ bestDist = dist; best = a; }
+    });
+    var diff = daysBetweenUTC(best[0], dateStr);
+    var rawIndex = best[2] + diff;
+    var tithiIndex = ((rawIndex % 30) + 30) % 30;
+    var monthShift = Math.floor(rawIndex / 30);
+    var paksha = tithiIndex < 15 ? 'Sud' : 'Vad';
+    var posInPaksha = tithiIndex % 15;
+    var tithiName = posInPaksha === 14 ? (paksha === 'Sud' ? 'Punam' : 'Amas') : TITHI_NAMES[posInPaksha];
+    var isEkadashi = posInPaksha === 10;
+    var isAmasPunam = posInPaksha === 14;
+    var baseIdx = MONTH_CYCLE.indexOf(best[1]);
+    var monthName = baseIdx === -1 ? best[1] : MONTH_CYCLE[((baseIdx + monthShift) % 12 + 12) % 12];
+    return { monthName: monthName, paksha: paksha, tithiName: tithiName, isEkadashi: isEkadashi, isAmasPunam: isAmasPunam, label: monthName + ' ' + paksha + ' ' + tithiName };
+  }
+
+  function getFestivalsForDate(dateStr){
+    return FESTIVALS_2026.filter(function(f){ return f[0] === dateStr; }).map(function(f){ return { name: f[1], desc: f[2] }; });
+  }
+
+  // Sunrise/sunset via the standard "sunrise equation" (NOAA-derived solar
+  // position formulas), computed for Vastral, Ahmedabad.
+  function computeSunTimes(date, lat, lng){
+    var rad = Math.PI / 180;
+    var dayMs = 86400000, J1970 = 2440588, J2000 = 2451545;
+    function toJulian(d){ return d.valueOf() / dayMs - 0.5 + J1970; }
+    function fromJulian(j){ return new Date((j + 0.5 - J1970) * dayMs); }
+    function toDays(d){ return toJulian(d) - J2000; }
+    var e = rad * 23.4397;
+    function declination(l){ return Math.asin(Math.sin(l) * Math.sin(e)); }
+    function solarMeanAnomaly(d){ return rad * (357.5291 + 0.98560028 * d); }
+    function eclipticLongitude(M){
+      var C = rad * (1.9148*Math.sin(M) + 0.02*Math.sin(2*M) + 0.0003*Math.sin(3*M));
+      var P = rad * 102.9372;
+      return M + C + P + Math.PI;
+    }
+    var lw = rad * -lng, phi = rad * lat;
+    function julianCycle(d){ return Math.round(d - 0.0009 - lw/(2*Math.PI)); }
+    function approxTransit(Ht, n){ return 0.0009 + (Ht + lw)/(2*Math.PI) + n; }
+    function solarTransitJ(ds, M, L){ return J2000 + ds + 0.0053*Math.sin(M) - 0.0069*Math.sin(2*L); }
+    function hourAngle(h, dec){ return Math.acos((Math.sin(h) - Math.sin(phi)*Math.sin(dec)) / (Math.cos(phi)*Math.cos(dec))); }
+
+    var d = toDays(date);
+    var n = julianCycle(d);
+    var ds = approxTransit(0, n);
+    var M = solarMeanAnomaly(ds);
+    var L = eclipticLongitude(M);
+    var dec = declination(L);
+    var Jnoon = solarTransitJ(ds, M, L);
+    var w = hourAngle(-0.833 * rad, dec);
+    var a = approxTransit(w, n);
+    var Jset = solarTransitJ(a, M, L);
+    var Jrise = Jnoon - (Jset - Jnoon);
+    return { sunrise: fromJulian(Jrise), sunset: fromJulian(Jset) };
+  }
+  function formatIST(date){
+    return date.toLocaleTimeString('en-IN', { hour:'numeric', minute:'2-digit', hour12:true, timeZone:'Asia/Kolkata' });
+  }
+
+  var calYear, calMonth; // calMonth is 0-based
+  (function initCalDate(){
+    var t = todayIST().split('-');
+    calYear = Number(t[0]); calMonth = Number(t[1]) - 1;
+  })();
+
+  function renderCalendar(){
+    $('#calMonthLabel').textContent = GREG_MONTHS[calMonth] + ' ' + calYear;
+    var firstWeekday = new Date(calYear, calMonth, 1).getDay();
+    var totalDays = new Date(calYear, calMonth+1, 0).getDate();
+    var grid = $('#calGrid'); grid.innerHTML = '';
+    var todayStr = todayIST();
+    for(var i=0;i<firstWeekday;i++){ grid.appendChild(el('div','')); }
+    for(var d=1; d<=totalDays; d++){
+      var dateStr = calYear + '-' + pad2(calMonth+1) + '-' + pad2(d);
+      var tithi = getApproxTithi(dateStr);
+      var fests = getFestivalsForDate(dateStr);
+      var dayEvents = state.events.filter(function(ev){ return ev.status==='approved' && ev.date===dateStr; });
+      var isToday = dateStr === todayStr;
+      var cell = el('button', 'calendar-cell' + (isToday ? ' calendar-cell-today' : '') + (tithi.isEkadashi ? ' calendar-cell-ekadashi' : '') + (tithi.isAmasPunam ? ' calendar-cell-amaspunam' : ''));
+      var dots = '';
+      if(tithi.isEkadashi) dots += '<span class="cal-dot cal-dot-maroon"></span>';
+      if(tithi.isAmasPunam) dots += '<span class="cal-dot cal-dot-ink"></span>';
+      if(fests.length) dots += '<span class="cal-dot cal-dot-gold"></span>';
+      if(dayEvents.length) dots += '<span class="cal-dot cal-dot-saffron"></span>';
+      cell.innerHTML = '<span class="cal-daynum">'+d+'</span><span class="cal-dots">'+dots+'</span>';
+      cell.dataset.date = dateStr;
+      cell.addEventListener('click', function(){ openDayFullscreen(this.dataset.date); });
+      grid.appendChild(cell);
+    }
+  }
+  $('#calPrevMonth').addEventListener('click', function(){ calMonth--; if(calMonth<0){ calMonth=11; calYear--; } renderCalendar(); });
+  $('#calNextMonth').addEventListener('click', function(){ calMonth++; if(calMonth>11){ calMonth=0; calYear++; } renderCalendar(); });
+  $('#calTodayBtn').addEventListener('click', function(){
+    var t = todayIST().split('-'); calYear = Number(t[0]); calMonth = Number(t[1]) - 1; renderCalendar();
+  });
+
+  var currentDayViewDate = null;
+  function openDayFullscreen(dateStr){
+    currentDayViewDate = dateStr;
+    var parts = dateStr.split('-').map(Number);
+    var y = parts[0], m = parts[1], d = parts[2];
+    var jsDate = new Date(y, m-1, d);
+
+    $('#dfWeekday').textContent = jsDate.toLocaleDateString('en-US', { weekday:'long' });
+    $('#dfDate').textContent = GREG_MONTHS[m-1] + ' ' + d + ', ' + y;
+
+    var tithi = getApproxTithi(dateStr);
+    $('#dfVikram').textContent = tithi.label + (tithi.monthName.indexOf('Adhik') === 0 ? ' (adhik / leap month)' : '');
+
+    var ekBanner = $('#dfEkadashiBanner');
+    if(tithi.isEkadashi){
+      ekBanner.classList.remove('hidden');
+      $('#dfEkadashiText').textContent = tithi.monthName + ' ' + tithi.paksha + ' Ekadashi';
+    } else {
+      ekBanner.classList.add('hidden');
+    }
+
+    var apBanner = $('#dfAmasPunamBanner');
+    if(tithi.isAmasPunam){
+      apBanner.classList.remove('hidden');
+      $('#dfAmasPunamKind').textContent = tithi.tithiName === 'Punam' ? 'Punam · Full Moon' : 'Amas · New Moon';
+      $('#dfAmasPunamText').textContent = tithi.monthName + ' ' + tithi.paksha + ' ' + tithi.tithiName;
+    } else {
+      apBanner.classList.add('hidden');
+    }
+
+    var fWrap = $('#dfFestivals'); fWrap.innerHTML = '';
+    getFestivalsForDate(dateStr).forEach(function(f){
+      var card = el('div', 'rounded-2xl bg-gold-50 border border-ink/10 p-5');
+      card.innerHTML = '<p class="font-display text-lg font-semibold text-maroon mb-1">'+esc(f.name)+'</p>' +
+        (f.desc ? '<p class="text-sm text-ink/75 leading-relaxed">'+esc(f.desc)+'</p>' : '');
+      fWrap.appendChild(card);
+    });
+
+    var sun = computeSunTimes(new Date(y, m-1, d, 12, 0, 0), VASTRAL_LAT, VASTRAL_LON);
+    $('#dfSunrise').textContent = formatIST(sun.sunrise);
+    $('#dfSunset').textContent = formatIST(sun.sunset);
+
+    var dayEvents = state.events.filter(function(ev){ return ev.status==='approved' && ev.date===dateStr; });
+    var evWrap = $('#dfEventsList'); evWrap.innerHTML = '';
+    $('#dfEventsEmpty').classList.toggle('hidden', dayEvents.length > 0);
+    dayEvents.forEach(function(ev){
+      var row = el('div', 'card-surface rounded-2xl p-4 cursor-pointer hover:shadow-md transition-shadow');
+      row.innerHTML = '<span class="text-xs font-medium text-saffron-700 bg-saffron-50 rounded-full px-2 py-0.5">'+esc(ev.category)+'</span>' +
+        '<h3 class="font-display font-semibold mt-2">'+esc(ev.title)+'</h3>' +
+        '<p class="text-xs text-slate mt-1">'+(ev.time ? formatTime(ev.time)+' · ' : '')+esc(ev.location)+'</p>';
+      row.addEventListener('click', function(){ closeDayFullscreen(); openEventDetail(ev.id); });
+      evWrap.appendChild(row);
+    });
+
+    $('#dayFullscreen').classList.remove('hidden');
+    $('#dayFullscreen').scrollTop = 0;
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDayFullscreen(){
+    $('#dayFullscreen').classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+  function shiftDayView(delta){
+    var parts = currentDayViewDate.split('-').map(Number);
+    var dt = new Date(Date.UTC(parts[0], parts[1]-1, parts[2]));
+    dt.setUTCDate(dt.getUTCDate() + delta);
+    openDayFullscreen(dt.getUTCFullYear() + '-' + pad2(dt.getUTCMonth()+1) + '-' + pad2(dt.getUTCDate()));
+  }
+  $('#btnCloseDayView').addEventListener('click', closeDayFullscreen);
+  $('#dayPrevBtn').addEventListener('click', function(){ shiftDayView(-1); });
+  $('#dayNextBtn').addEventListener('click', function(){ shiftDayView(1); });
+
+  function renderHomeTithi(){
+    var todayStr = todayIST();
+    var tithi = getApproxTithi(todayStr);
+    var label = tithi.label + (tithi.isEkadashi ? ' · Ekadashi' : '');
+    $('#homeTithiLabel').textContent = label;
+    var sun = computeSunTimes(new Date(), VASTRAL_LAT, VASTRAL_LON);
+    $('#homeSunTimes').textContent = 'Sunrise ' + formatIST(sun.sunrise) + ' · Sunset ' + formatIST(sun.sunset);
+  }
+  $('#btnHomeViewCalendar').addEventListener('click', function(){ openDayFullscreen(todayIST()); });
+
+  /* ============================= INIT ============================= */
+  renderAuthState();
+  if(state.user){
+    $('#app').classList.add('hidden-important');
+    $('#bootLoading').classList.remove('hidden-important');
+    loadCommunityData().then(function(){
+      $('#bootLoading').classList.add('hidden-important');
+      $('#app').classList.remove('hidden-important');
+      goToPage('home');
+    });
+  }
+})();
+</script>
+</body>
+</html>
